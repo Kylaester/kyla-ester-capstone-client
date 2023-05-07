@@ -1,11 +1,53 @@
 @use "../../Partials/globals" as *;
 @use "../../Partials/variables" as *;
-
-.Nav {
-  color: black;
-  &__profile {
-    width: 20vw;
-    background-color: $Blurple;
-    border-radius: 50%;
+@use "../../Partials/mixins" as *;
+.nav {
+  background-color: white;
+  height: 100%;
+  width: 16.375rem;
+  border-right: 8px $LightGrey solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    @include logo;
+    margin: 4rem 2rem 2rem 2rem;
+  }
+  &__icon {
+    width: 2.25rem;
+    margin-right: 1rem;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 2rem 2rem 2rem;
+  }
+  &__link-login {
+    width: 10rem;
+    height: 3rem;
+    border: 1px solid $Blackish;
+    border-radius: 30px;
+  }
+  &__selected {
+    width: 12.5rem;
+    height: 3rem;
+    background-color: $LightGrey;
+    border: 2px solid $Blackish;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 2rem 2rem 2rem;
+  }
+  &__icon-login {
+    width: 2.25rem;
+    margin-right: 0.5rem;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 }

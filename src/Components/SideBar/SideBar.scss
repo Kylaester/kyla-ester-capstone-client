@@ -1,0 +1,30 @@
+@use "../../Partials/globals" as *;
+@use "../../Partials/variables" as *;
+@use "../../Partials/mixins" as *;
+
+.side {
+  background-color: $LightYellow;
+  height: 75vw;
+  width: 19rem;
+  border: 2px solid $Blackish;
+  &__notif {
+    background-color: White;
+    border: 2px solid $Blackish;
+    display: flex;
+    margin: 10rem 1rem 0rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+  &__message {
+    @include Sidebar;
+  }
+  &__click {
+    @include Sidebar;
+    color: $DarkGrey;
+  }
+}
