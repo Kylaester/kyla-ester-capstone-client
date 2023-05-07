@@ -1,0 +1,10 @@
+@use "../Partials/globals" as *;
+@use "../Partials/variables" as *;
+
+.Background {
+  height: 72vw;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  background-image: radial-gradient($Blurple 30%, white);
+}

@@ -1,0 +1,11 @@
+@use "../../Partials/globals" as *;
+@use "../../Partials/variables" as *;
+
+.Nav {
+  color: black;
+  &__profile {
+    width: 20vw;
+    background-color: $Blurple;
+    border-radius: 50%;
+  }
+}

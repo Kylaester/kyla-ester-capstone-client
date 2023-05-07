@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home.js";
+import React from "react";
+import Header from "./Components/Header/Header.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<WarehouseList />} />
+    <Route
+      path="/warehouse/:warehouse_name"
+      element={<WarehouseDetails />}
+    />
+    <Route path="/warehouse/:id" element={<WarehouseInventoryList />} />
+    <Route path="/deleteWarehouse" element={<DeleteWarehouse />}></Route>
+    <Route
+      path="/deleteInventoryItem"
+      element={<DeleteInventoryItem />}
+    ></Route>
+    <Route path="/EditWarehouse" element={<EditWarehouse />}></Route>
+    <Route path="/addNewWarehouse" element={<AddNewWarehouse />}></Route>
+    <Route path="/inventory" element={<InventoryPage />}></Route>
+    <Route path="/inventory/:id" element={<InventoryDetails />}></Route>
+    <Route path="/inventory/new" element={<AddNewInventoryItem />} />
+    
+    <Route path="/AddNewWarehouse" element={<AddNewWarehouse />}></Route> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

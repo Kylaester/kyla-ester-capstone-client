@@ -1,0 +1,10 @@
+@use "../../Partials/globals" as *;
+@use "../../Partials/variables" as *;
+
+.Hero {
+  height: 60vw;
+  width: 75vw;
+  margin-right: 1rem;
+  background-color: #b0b3e6;
+  border-radius: 10px;
+}
