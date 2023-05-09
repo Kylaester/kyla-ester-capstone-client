@@ -20,7 +20,7 @@ function Hero() {
         <div className="hero__card">
           <div className="hero__card-top">
             <div className="hero__language-pink">
-              <p className="hero__language-text">JavaScript</p>
+              <p className="hero__language-text">HTML</p>
             </div>
           </div>
           <div className="hero__card-middle">
