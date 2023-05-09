@@ -13,6 +13,7 @@
   &__title {
     @include logo;
     margin: 4rem 2rem 2rem 2rem;
+    text-decoration: none;
   }
   &__icon {
     width: 2.25rem;
@@ -23,6 +24,8 @@
     align-items: center;
     justify-content: center;
     margin: 2rem 2rem 2rem 2rem;
+    text-decoration: none;
+    color: black;
   }
   &__link-login {
     width: 10rem;
@@ -39,7 +42,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem 2rem 2rem 2rem;
+    margin: 2rem 2rem 2rem 3rem;
+    text-decoration: none;
+    color: black;
   }
   &__icon-login {
     width: 2.25rem;

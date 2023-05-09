@@ -5,18 +5,18 @@ import "./HeroLessons.scss";
 import html from "../../Assets/html (2).png";
 import arrow from "../../Assets/down-arrow.png";
 import back from "../../Assets/angle-left.svg";
-
+import { Link } from "react-router-dom";
 function HeroLessons() {
   return (
     <>
       <section className="lessons">
-        <div className="hero__back">
+        <Link className="hero__back" to={"/"}>
           <img className="hero__back-img" src={back} />
-        </div>
+        </Link>
         <section className="lessons__hero">
           <div className="lessons__cards">
             <img className="lessons__img-arrow-left" src={arrow} />
-            <div className="lessons__card">
+            <Link className="lessons__card" to={"/Learn"}>
               <div className="lessons__card-top">
                 <img className="lessons__img" src={html} />
               </div>
@@ -24,7 +24,7 @@ function HeroLessons() {
                 {" "}
                 <h3 className="lessons__card-text">Lesson 1</h3>
               </div>
-            </div>
+            </Link>
             <div className="lessons__card">
               <div className="lessons__card-top">
                 <img className="lessons__img" src={html} />

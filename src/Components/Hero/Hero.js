@@ -4,6 +4,7 @@ import "./Hero.scss";
 // import { Link } from "react-router-dom";
 import back from "../../Assets/angle-left.svg";
 import lock from "../../Assets/lock.svg";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -17,17 +18,19 @@ function Hero() {
         </div>
       </section>
       <section className="hero__cards">
-        <div className="hero__card">
-          <div className="hero__card-top">
-            <div className="hero__language-pink">
-              <p className="hero__language-text">HTML</p>
+        <Link className="link" to={"/Lessons"}>
+          <div className="hero__card">
+            <div className="hero__card-top">
+              <div className="hero__language-yellow">
+                <p className="hero__language-text">HTML</p>
+              </div>
             </div>
+            <div className="hero__card-middle">
+              <h3 className="hero__card-text">Basics</h3>
+            </div>
+            <div className="hero__card-bottom"></div>
           </div>
-          <div className="hero__card-middle">
-            <h3 className="hero__card-text">Basics</h3>
-          </div>
-          <div className="hero__card-bottom"></div>
-        </div>
+        </Link>
         <div className="hero__card">
           <div className="hero__card-top">
             <div className="hero__language-blue">
@@ -45,7 +48,7 @@ function Hero() {
             <img className="lock-img" src={lock} />
           </div>
           <div className="hero__card-top">
-            <div className="hero__language-yellow">
+            <div className="hero__language-pink">
               <p className="hero__language-text">JavaScript</p>
             </div>
           </div>

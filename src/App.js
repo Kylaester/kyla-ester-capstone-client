@@ -1,7 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home.js";
 import Lessons from "./Pages/Lessons.js";
+import Learn from "./Pages/Learn/Learn.js";
 import React from "react";
+import TwoLesson from "./Components/TwoLesson/TwoLesson.js";
+import OneLesson from "./Components/OneLesson/OneLesson.js";
 
 function App() {
   return (
@@ -9,6 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Lessons" element={<Lessons />} />
+        <Route path="/Learn" element={<Learn />} />
+        <Route path="/Learn-1" element={<TwoLesson />} />
+        <Route path="/Learn-2" element={<OneLesson />} />
         {/* <Route path="/" element={<WarehouseList />} />
     <Route
       path="/warehouse/:warehouse_name"

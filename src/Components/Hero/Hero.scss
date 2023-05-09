@@ -47,6 +47,9 @@
     display: flex;
     justify-content: space-around;
   }
+  .__card:hover * {
+    background-color: $LightGrey;
+  }
   &__card {
     width: 15rem;
     height: 12rem;
@@ -61,6 +64,7 @@
     justify-content: flex-end;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: relative;
+
     &-bottom {
       border-top: 1px solid black;
       height: 10rem;
@@ -116,6 +120,7 @@
   }
   &__language-text {
     font-size: 13px;
+    color: black;
   }
   &__social {
     display: flex;
@@ -215,5 +220,42 @@
     position: absolute;
     right: 63px;
     bottom: 37px;
+  }
+}
+.link {
+  text-decoration: none;
+}
+.lock * {
+  animation: myAnim 6s ease 0s infinite normal forwards;
+}
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
   }
 }
