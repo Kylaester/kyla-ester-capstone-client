@@ -14,27 +14,28 @@
     justify-content: space-between;
   }
 }
-// .background-lesson {
-//   height: 68vw;
-//   width: 100vw;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-// .lesson2 {
-//   height: 61vw;
-//   width: 95vw;
-//   border-radius: 30px;
-//   background-color: white;
-//   border-top: 2px solid black;
-//   border-left: 2px solid black;
-//   border-right: 2px solid black;
-//   border-bottom: 20px solid $MediumGrey;
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-//   color: black;
-//   text-decoration: none;
+.lesson3__container {
+  height: 68vw;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lesson3 {
+  height: 61vw;
+  width: 95vw;
+  border-radius: 30px;
+  background-color: white;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 20px solid $MediumGrey;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  text-decoration: none;
+}
 //   &__top {
 //     display: flex;
 //     align-items: center;

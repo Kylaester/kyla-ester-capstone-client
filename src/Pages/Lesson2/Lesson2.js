@@ -23,9 +23,9 @@ function Lesson2() {
         {" "}
         <Link className="lesson2" to={"/Lesson3"}>
           <div className="lesson2__top">
-            <button className="lesson__back-2" to={"/Leason1"}>
+            <Link className="lesson__back-2" to={"/Leason1"}>
               <img className="lesson__back-img-2" src={back} />
-            </button>
+            </Link>
 
             <h2 className="lesson2__header">
               Lets Create a Blog Post for Kingsley using HTML !
