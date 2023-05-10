@@ -1,6 +1,6 @@
 // insert warehouse page details here
 import Nav from "../../Components/Nav/Nav.js";
-
+import back from "../../Assets/angle-left.svg";
 import "./LogIn.scss";
 import { Link } from "react-router-dom";
 
