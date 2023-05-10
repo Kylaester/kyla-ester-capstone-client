@@ -3,8 +3,8 @@
 @use "../../Partials/mixins" as *;
 .nav {
   background-color: white;
-  height: 100%;
-  width: 16.375rem;
+  height: 68vw;
+  width: 18vw;
   border-right: 8px $LightGrey solid;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
     text-decoration: none;
   }
   &__icon {
-    width: 2.25rem;
+    width: 2.5vw;
     margin-right: 1rem;
   }
   &__link {
@@ -28,26 +28,26 @@
     color: black;
   }
   &__link-login {
-    width: 10rem;
-    height: 3rem;
+    width: 13vw;
+    height: 3vw;
     border: 2px solid $Blackish;
     border-radius: 30px;
   }
   &__selected {
-    width: 12.5rem;
-    height: 3rem;
+    width: 15vw;
+    height: 3vw;
     background-color: $LightGrey;
     border: 2px solid $Blackish;
     border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem 2rem 2rem 3rem;
+    margin: 2rem 2rem 2rem 4rem;
     text-decoration: none;
     color: black;
   }
   &__icon-login {
-    width: 2.25rem;
+    width: 3vw;
     margin-right: 0.5rem;
   }
   &__links {

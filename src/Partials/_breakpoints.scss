@@ -1,7 +1,7 @@
-$tablet-min-width: 1024px;
-$tablet-max-width: 1366px;
+$tablet-min-width: 800px;
+
 @mixin tablet {
-  @media screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+  @media screen and (min-width: $tablet-min-width) {
     @content;
   }
 }

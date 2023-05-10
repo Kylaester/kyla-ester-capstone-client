@@ -10,13 +10,13 @@ function HeroLessons() {
   return (
     <>
       <section className="lessons">
-        <Link className="hero__back" to={"/"}>
-          <img className="hero__back-img" src={back} />
+        <Link className="lessons__back" to={"/"}>
+          <img className="lessons__back-img" src={back} />
         </Link>
         <section className="lessons__hero">
           <div className="lessons__cards">
             <img className="lessons__img-arrow-left" src={arrow} />
-            <Link className="lessons__card" to={"/Learn"}>
+            <Link className="lessons__card" to={"/Leason1"}>
               <div className="lessons__card-top">
                 <img className="lessons__img" src={html} />
               </div>

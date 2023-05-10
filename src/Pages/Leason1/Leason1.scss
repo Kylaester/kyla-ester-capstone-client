@@ -1,16 +1,29 @@
 @use "../../Partials/globals" as *;
 @use "../../Partials/variables" as *;
 @use "../../Partials/breakpoints" as *;
+.background {
+  @include tablet {
+    height: 68vw;
+    // display: flex;
+    // align-items: center;
+    // justify-content: end;
+    overflow: hidden;
+    background-color: $BrightYellow;
+    background-image: url(../../Assets/abstract-horizontal-background-with-colorful-waves-in-yellow-orange-and-brown-colors-trendy-illustra.svg);
+    display: flex;
+    justify-content: space-between;
+  }
+}
 .lesson {
-  height: 75vw;
-  width: 110vw;
+  height: 68vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: black;
   text-decoration: none;
+  margin-left: 1.5rem;
+
   &__text {
     font-size: 46px;
   }
@@ -22,15 +35,15 @@
   }
   &__text-container {
     height: 17vw;
-    width: 74vw;
+    width: 70vw;
     border: 2px solid black;
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   &__hero {
-    width: 81rem;
-    height: 59rem;
+    width: 70rem;
+    height: 45rem;
     border-radius: 35px;
     background-color: white;
     border-top: 2px solid black;
@@ -82,19 +95,19 @@
     }
   }
   &__bear {
-    width: 45rem;
+    width: 34rem;
   }
   &__leaf-1 {
-    width: 10rem;
+    width: 8rem;
     position: absolute;
-    bottom: 59px;
+    bottom: 52px;
     right: 368px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
   &__leaf-2 {
-    width: 10rem;
+    width: 8rem;
     position: absolute;
-    bottom: 59px;
+    bottom: 53px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     left: 21rem;
   }
@@ -114,7 +127,7 @@
     display: flex;
   }
 }
-.hero__back {
+.lesson__back {
   margin: 2rem;
   width: 4rem;
   height: 4rem;

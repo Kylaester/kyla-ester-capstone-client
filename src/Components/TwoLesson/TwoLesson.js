@@ -16,8 +16,8 @@ function TwoLesson() {
       <Link className="lesson" to={"/Lessons"}>
         <section className="lesson__hero">
           <div className="lesson__top">
-            <Link className="hero__back" to={"/"}>
-              <img className="hero__back-img" src={back} />
+            <Link className="lesson__back" to={"/"}>
+              <img className="lesson__back-img" src={back} />
             </Link>
             <div className="lesson__text-container">
               <h2 className="lesson__text">

@@ -6,7 +6,8 @@ import Home from "../../Assets/home (1).svg";
 import Lessons from "../../Assets/graduation-cap.svg";
 import Progress from "../../Assets/chart-histogram.svg";
 import CheckIn from "../../Assets/list-check.svg";
-import LogIn from "../../Assets/user.svg";
+import Login from "../../Assets/user.svg";
+import LogIn from "../../Pages/LogIn/LogIn";
 import { Link } from "react-router-dom";
 
 function Nav() {
@@ -33,10 +34,10 @@ function Nav() {
           <h2 className="nav__header">Check In</h2>
         </div>
       </section>
-      <div className="nav__link nav__link-login">
-        <img className="nav__icon-login" src={LogIn} />
+      <Link className="nav__link nav__link-login" to={"/LogIn"}>
+        <img className="nav__icon-login" src={Login} />
         <h2 className="nav__header">Log In</h2>
-      </div>
+      </Link>
     </section>
   );
 }

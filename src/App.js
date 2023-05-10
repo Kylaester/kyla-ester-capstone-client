@@ -1,10 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home.js";
 import Lessons from "./Pages/Lessons.js";
-import Learn from "./Pages/Learn/Learn.js";
+import Leason1 from "./Pages/Leason1/Leason1.js";
+import LogIn from "./Pages/LogIn/LogIn.js";
+import SignUp from "./Pages/SignUp/SignUp.js";
 import React from "react";
 import TwoLesson from "./Components/TwoLesson/TwoLesson.js";
-import OneLesson from "./Components/OneLesson/OneLesson.js";
+import Background from "./Components/Background/Background.js";
 
 function App() {
   return (
@@ -12,28 +14,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Lessons" element={<Lessons />} />
-        <Route path="/Learn" element={<Learn />} />
+        <Route path="/Leason1" element={<Leason1 />} />
         <Route path="/Learn-1" element={<TwoLesson />} />
-        <Route path="/Learn-2" element={<OneLesson />} />
-        {/* <Route path="/" element={<WarehouseList />} />
-    <Route
-      path="/warehouse/:warehouse_name"
-      element={<WarehouseDetails />}
-    />
-    <Route path="/warehouse/:id" element={<WarehouseInventoryList />} />
-    <Route path="/deleteWarehouse" element={<DeleteWarehouse />}></Route>
-    <Route
-      path="/deleteInventoryItem"
-      element={<DeleteInventoryItem />}
-    ></Route>
-    <Route path="/EditWarehouse" element={<EditWarehouse />}></Route>
-    <Route path="/addNewWarehouse" element={<AddNewWarehouse />}></Route>
-    <Route path="/inventory" element={<InventoryPage />}></Route>
-    <Route path="/inventory/:id" element={<InventoryDetails />}></Route>
-    <Route path="/inventory/new" element={<AddNewInventoryItem />} />
-    
-    <Route path="/AddNewWarehouse" element={<AddNewWarehouse />}></Route> */}
+        <Route path="/LogIn" element={<LogIn />} />
+        <Route path="/SignUp" element={<SignUp />} />
       </Routes>
+      <Background />
     </BrowserRouter>
   );
 }
