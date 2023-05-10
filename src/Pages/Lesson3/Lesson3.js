@@ -17,7 +17,13 @@ import "./Lesson3.scss";
 // import { Link } from "react-router-dom";
 
 function Lesson3() {
-  return <section className="background"></section>;
+  return (
+    <section className="background">
+      <section className="lesson3__container">
+        <section className="lesson3"></section>
+      </section>
+    </section>
+  );
 }
 
 export default Lesson3;
