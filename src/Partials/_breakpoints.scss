@@ -1,7 +1,13 @@
 $tablet-min-width: 800px;
+$smalltablet-max-width: 800px;
 
 @mixin tablet {
   @media screen and (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+@mixin smalltablet {
+  @media screen and (max-width: $smalltablet-max-width) {
     @content;
   }
 }

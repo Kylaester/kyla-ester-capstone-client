@@ -5,7 +5,6 @@ import "./Leason1.scss";
 // import html from "../../Assets/html (2).png";
 // import arrow from "../../Assets/down-arrow.png";
 // import back from "../../Assets/angle-left.svg";
-
 import TwoLesson from "../../Components/TwoLesson/TwoLesson";
 import { Link } from "react-router-dom";
 import Background from "../../Components/Background/Background";
@@ -18,7 +17,7 @@ function Leason1() {
   return (
     <>
       <section className="background">
-        <Link className="lesson" to={"/Lessons"}>
+        <Link className="lesson" to={"/Lesson2"}>
           <section className="lesson__hero">
             <div className="lesson__top">
               <button className="lesson__back" to={"/"}>

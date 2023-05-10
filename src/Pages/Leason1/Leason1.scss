@@ -23,9 +23,8 @@
   color: black;
   text-decoration: none;
   margin-left: 1.5rem;
-
   &__text {
-    font-size: 46px;
+    font-size: 2rem;
   }
   &__top {
     margin-top: 3rem;
@@ -34,16 +33,17 @@
     justify-content: center;
   }
   &__text-container {
-    height: 17vw;
-    width: 70vw;
+    height: 10vw;
+    width: 60vw;
     border: 2px solid black;
     text-align: center;
-    padding-top: 1rem;
+    padding: 1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+
   &__hero {
-    width: 70rem;
-    height: 45rem;
+    width: 95vw;
+    height: 59vw;
     border-radius: 35px;
     background-color: white;
     border-top: 2px solid black;
@@ -95,28 +95,28 @@
     }
   }
   &__bear {
-    width: 34rem;
+    width: 32rem;
   }
   &__leaf-1 {
-    width: 8rem;
-    position: absolute;
-    bottom: 52px;
-    right: 368px;
+    width: 10vw;
+
+    bottom: 4rem;
+    right: 23rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
   &__leaf-2 {
-    width: 8rem;
-    position: absolute;
-    bottom: 53px;
+    width: 10vw;
+
+    bottom: 63px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     left: 21rem;
   }
   &__art {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-top: 4rem;
     &-text {
       font-size: 43px;
       margin-left: 4rem;

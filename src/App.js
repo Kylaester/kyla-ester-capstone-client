@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home.js";
 import Lessons from "./Pages/Lessons.js";
 import Leason1 from "./Pages/Leason1/Leason1.js";
+import Lesson2 from "./Pages/Lesson2/Lesson2.js";
+import Lesson3 from "./Pages/Lesson3/Lesson3.js";
 import LogIn from "./Pages/LogIn/LogIn.js";
 import SignUp from "./Pages/SignUp/SignUp.js";
 import React from "react";
@@ -15,11 +17,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Lessons" element={<Lessons />} />
         <Route path="/Leason1" element={<Leason1 />} />
+        <Route path="/Lesson2" element={<Lesson2 />} />
+        <Route path="/Lesson3" element={<Lesson3 />} />
         <Route path="/Learn-1" element={<TwoLesson />} />
         <Route path="/LogIn" element={<LogIn />} />
         <Route path="/SignUp" element={<SignUp />} />
       </Routes>
-      <Background />
     </BrowserRouter>
   );
 }
