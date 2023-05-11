@@ -27,13 +27,14 @@
     font-size: 2rem;
   }
   &__top {
-    margin-top: 3rem;
+    margin-right: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   &__text-container {
     height: 10vw;
+    margin-top: 2rem;
     width: 60vw;
     border: 2px solid black;
     text-align: center;
@@ -128,7 +129,7 @@
     display: flex;
   }
 }
-.lesson__back {
+.lesson1__back {
   margin: 2rem;
   width: 4rem;
   height: 4rem;
@@ -142,7 +143,6 @@
 
   &-img {
     width: 2rem;
-    height: 2rem;
   }
 }
 .points {

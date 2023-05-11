@@ -22,7 +22,7 @@ function HeroLessons() {
               </div>
               <div className="lessons__card-bottom">
                 {" "}
-                <h3 className="lessons__card-text">Lesson 1</h3>
+                <h3 className="lessons__card-text">Basics 1</h3>
               </div>
             </Link>
             <div className="lessons__card">
@@ -31,7 +31,7 @@ function HeroLessons() {
               </div>
               <div className="lessons__card-bottom">
                 {" "}
-                <h3 className="lessons__card-text">Lesson 1</h3>
+                <h3 className="lessons__card-text">Basics 2</h3>
               </div>
             </div>
             <div className="lessons__card">
@@ -40,7 +40,7 @@ function HeroLessons() {
               </div>
               <div className="lessons__card-bottom">
                 {" "}
-                <h3 className="lessons__card-text">Lesson 1</h3>
+                <h3 className="lessons__card-text">Basics 3</h3>
               </div>
             </div>
             <img className="lessons__img-arrow-right" src={arrow} />

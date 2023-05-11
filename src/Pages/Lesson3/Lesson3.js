@@ -22,7 +22,7 @@ function Lesson3() {
       <section className="lesson3__container">
         <section className="lesson3">
           <div className="lesson3__top">
-            <Link className="lesson__back-3" to={"/Leason2"}>
+            <Link className="lesson__back-3" to={"/Lesson2"}>
               <img className="lesson__back-img-3" src={back} />
             </Link>
             <div className="points">
@@ -52,7 +52,9 @@ function Lesson3() {
             <h3 className="lesson3__language">HTML</h3>
             <div className="lesson3__answers">
               <Link className="lesson3__answer">&lt;button&gt;</Link>
-              <Link className="lesson3__answer">&lt;h1&gt;</Link>
+              <Link to={"/Lesson4"} className="lesson3__answer">
+                &lt;h1&gt;
+              </Link>
               <Link className="lesson3__answer">&lt;p&gt;</Link>
             </div>
             <Link className="lesson3__help">Need Help?</Link>

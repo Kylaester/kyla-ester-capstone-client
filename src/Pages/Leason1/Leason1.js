@@ -20,9 +20,9 @@ function Leason1() {
         <Link className="lesson" to={"/Lesson2"}>
           <section className="lesson__hero">
             <div className="lesson__top">
-              <button className="lesson__back" to={"/"}>
-                <img className="lesson__back-img" src={back} />
-              </button>
+              <Link className="lesson1__back" to={"/Lessons"}>
+                <img className="lesson1__back-img" src={back} />
+              </Link>
               <div className="lesson__text-container">
                 <h2 className="lesson__text">
                   Kingsley needs your help ! He wants to start a blog but
