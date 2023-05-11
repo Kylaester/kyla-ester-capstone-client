@@ -10,7 +10,7 @@ import Nav from "../../Components/Nav/Nav";
 // import { Link } from "react-router-dom";
 // import Background from "../../Components/Background/Background";
 import back from "../../Assets/angle-left.svg";
-// import points from "../../Assets/golde_icon.svg";
+import points from "../../Assets/golde_icon.svg";
 // import bear from "../../Assets/Group.svg";
 // import leaf1 from "../../Assets/Vector.svg";
 import plant from "../../Assets/plant.png";
@@ -30,6 +30,10 @@ function Lesson2() {
             <h2 className="lesson2__header">
               Lets Create a Blog Post for Kingsley using HTML !
             </h2>
+            <div className="points">
+              <img className="points__img" src={points} />
+              <p className="points__text">9999</p>
+            </div>
           </div>
           <div className="example">
             <div className="example__top">
@@ -52,7 +56,7 @@ function Lesson2() {
               <img className="example__img" src={plant} />
             </div>
 
-            <button className="example__button">Read More</button>
+            <Link className="example__button">Read More</Link>
           </div>
         </Link>
       </section>

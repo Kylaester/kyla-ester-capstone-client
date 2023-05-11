@@ -51,11 +51,11 @@ function Lesson3() {
           <div className="lesson3__bottom">
             <h3 className="lesson3__language">HTML</h3>
             <div className="lesson3__answers">
-              <button className="lesson3__answer">&lt;button&gt;</button>
-              <button className="lesson3__answer">&lt;h1&gt;</button>
-              <button className="lesson3__answer">&lt;p&gt;</button>
+              <Link className="lesson3__answer">&lt;button&gt;</Link>
+              <Link className="lesson3__answer">&lt;h1&gt;</Link>
+              <Link className="lesson3__answer">&lt;p&gt;</Link>
             </div>
-            <button className="lesson3__help">Need Help?</button>
+            <Link className="lesson3__help">Need Help?</Link>
           </div>
         </section>
       </section>
