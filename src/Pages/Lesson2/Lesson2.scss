@@ -63,6 +63,7 @@
   padding: 2rem 3rem;
   border-radius: 30px;
   margin-top: 3rem;
+  position: relative;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   &__title {
     font-size: 29px;
@@ -78,7 +79,7 @@
     text-align: center;
     width: 10rem;
     position: absolute;
-    bottom: 18%;
+    bottom: 12%;
     height: 1.5rem;
     padding: 0.5rem;
     font-size: 19px;
@@ -95,8 +96,8 @@
     height: 9vw;
     margin-top: 4rem;
     position: absolute;
-    right: 33%;
-    top: 29%;
+    right: 13%;
+    bottom: 70%;
   }
   &__text-top {
     display: flex;
