@@ -1,24 +1,53 @@
 import "./Lesson3.scss";
-// import Nav from "../../Components/Nav/Nav";
-// // import { useEffect, useState } from "react";
-// // import axios from "axios";
-// // import { Link } from "react-router-dom";
-// // import html from "../../Assets/html (2).png";
-// // import arrow from "../../Assets/down-arrow.png";
-// // import back from "../../Assets/angle-left.svg";
-// import TwoLesson from "../../Components/TwoLesson/TwoLesson";
-// import { Link } from "react-router-dom";
-// import Background from "../../Components/Background/Background";
+import { useEffect, useState } from "react";
 import back from "../../Assets/angle-left.svg";
 import points from "../../Assets/golde_icon.svg";
-// import bear from "../../Assets/Group.svg";
-// import leaf1 from "../../Assets/Vector.svg";
-// import plant from "../../Assets/plant.png";
 import { Link } from "react-router-dom";
+import WrongAnswer from "../../Components/WrongAnswer/WrongAnswer";
+import NeedHelp from "../../Components/NeedHelp/NeedHelp";
+import PreviewAnswer from "../../Components/Preview/Preview";
 
 function Lesson3() {
+  const [show, setShow] = useState(false);
+  const [wrongCount, setWrongCount] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
+  const [showPreview, setShowPreview] = useState(false);
+
+  const handlePreviewClick = () => {
+    setShowPreview(true);
+  };
+
+  const handleHelpClick = () => {
+    setShowPopup(true);
+  };
+
+  const handleWrongAnswerClick = () => {
+    setWrongCount(wrongCount + 1);
+    if (wrongCount + 1 === 2) {
+      setShowPopup(true);
+    } else {
+      setShow(true);
+    }
+  };
+  const handleDelayedLinkClick = () => {
+    setShowPreview(true);
+    alert("Correct!");
+    setTimeout(() => {
+      window.location.href = "/Lesson4";
+    }, 1500);
+  };
+
   return (
     <section className="background">
+      {show && <WrongAnswer setShow={setShow} />}
+      {showPopup && (
+        <NeedHelp
+          setShowPopup={setShowPopup}
+          lesson={3}
+          handleWrongAnswerClick={handleWrongAnswerClick}
+        />
+      )}
+      {showPreview && <PreviewAnswer setPreviewShow={setShowPreview} />}
       <section className="lesson3__container">
         <section className="lesson3">
           <div className="lesson3__top">
@@ -27,7 +56,7 @@ function Lesson3() {
             </Link>
             <div className="points">
               <img className="points__img" src={points} />
-              <p className="points__text">9999</p>
+              <p className="points__text">4</p>
             </div>
           </div>
           <div className="lesson3__middle">
@@ -42,22 +71,33 @@ function Lesson3() {
                   <span className="green">First </span>Heading ?
                 </h2>
               </div>
-              <div className="lesson3__preview">
-                <p className="lesson3__preview--title">Preivew</p>
-                <p className="lesson3__preview--1">Green Thumb</p>
-              </div>
             </div>
           </div>
           <div className="lesson3__bottom">
             <h3 className="lesson3__language">HTML</h3>
             <div className="lesson3__answers">
-              <Link className="lesson3__answer">&lt;button&gt;</Link>
-              <Link to={"/Lesson4"} className="lesson3__answer">
+              <Link
+                onClick={handleWrongAnswerClick}
+                className="lesson3__answer"
+              >
+                &lt;button&gt;
+              </Link>
+              <Link
+                onClick={handleDelayedLinkClick}
+                className="lesson3__answer"
+              >
                 &lt;h1&gt;
               </Link>
-              <Link className="lesson3__answer">&lt;p&gt;</Link>
+              <Link
+                onClick={handleWrongAnswerClick}
+                className="lesson3__answer"
+              >
+                &lt;p&gt;
+              </Link>
             </div>
-            <Link className="lesson3__help">Need Help?</Link>
+            <button onClick={handleHelpClick} className="lesson3__help">
+              Need Help?
+            </button>
           </div>
         </section>
       </section>

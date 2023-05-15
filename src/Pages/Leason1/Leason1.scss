@@ -1,17 +1,15 @@
 @use "../../Partials/globals" as *;
 @use "../../Partials/variables" as *;
 @use "../../Partials/breakpoints" as *;
-.background {
+.background-lesson1 {
   @include tablet {
     height: 68vw;
-    // display: flex;
-    // align-items: center;
-    // justify-content: end;
     overflow: hidden;
     background-color: $BrightYellow;
     background-image: url(../../Assets/abstract-horizontal-background-with-colorful-waves-in-yellow-orange-and-brown-colors-trendy-illustra.svg);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
   }
 }
 .lesson {
@@ -23,8 +21,12 @@
   color: black;
   text-decoration: none;
   margin-left: 1.5rem;
+
+  &__link {
+    text-decoration: none;
+  }
   &__text {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   &__top {
     margin-right: 4rem;
@@ -38,6 +40,9 @@
     width: 60vw;
     border: 2px solid black;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }

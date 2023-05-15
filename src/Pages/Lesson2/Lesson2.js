@@ -20,7 +20,6 @@ function Lesson2() {
   return (
     <section className="background">
       <section className="background-lesson">
-        {" "}
         <Link className="lesson2" to={"/Lesson3"}>
           <div className="lesson2__top">
             <Link className="lesson__back-2" to={"/Leason1"}>
@@ -32,7 +31,7 @@ function Lesson2() {
             </h2>
             <div className="points">
               <img className="points__img" src={points} />
-              <p className="points__text">9999</p>
+              <p className="points__text">2</p>
             </div>
           </div>
           <div className="example">
@@ -56,7 +55,9 @@ function Lesson2() {
               <img className="example__img" src={plant} />
             </div>
 
-            <Link className="example__button">Read More</Link>
+            <Link to={"/Lesson3"} className="example__button">
+              Read More
+            </Link>
           </div>
         </Link>
       </section>

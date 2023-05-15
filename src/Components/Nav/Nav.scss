@@ -5,7 +5,8 @@
   background-color: white;
   height: 68vw;
   width: 18vw;
-  border-right: 8px $LightGrey solid;
+  border-right: 3px black solid;
+  box-shadow: 13px 5px 16px -5px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,15 +30,18 @@
   }
   &__link-login {
     width: 13vw;
-    height: 3vw;
+    height: 4vw;
+    background-color: $LightBlue;
     border: 2px solid $Blackish;
     border-radius: 30px;
   }
   &__selected {
     width: 15vw;
     height: 3vw;
-    background-color: $LightGrey;
-    border: 2px solid $Blackish;
+    border-top: 2px solid $Blackish;
+    border-right: 2px solid $Blackish;
+    border-left: 2px solid $Blackish;
+    border-bottom: 5px solid $Blackish;
     border-radius: 30px;
     display: flex;
     align-items: center;

@@ -8,11 +8,12 @@ import Lesson4 from "./Pages/Lesson4/Lesson4.js";
 import Lesson5 from "./Pages/Lesson5/Lesson5.js";
 import Lesson6 from "./Pages/Lesson6/Lesson6.js";
 import Lesson7 from "./Pages/Lesson7/Lesson7.js";
+import Settings from "./Pages/Settings/Settings.js";
+import Complete1 from "./Pages/Basics1Complete/Complete1.js";
 import LogIn from "./Pages/LogIn/LogIn.js";
 import SignUp from "./Pages/SignUp/SignUp.js";
 import React from "react";
 import TwoLesson from "./Components/TwoLesson/TwoLesson.js";
-// import Background from "./Components/Background/Background.js";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
         <Route path="/Lesson5" element={<Lesson5 />} />
         <Route path="/Lesson6" element={<Lesson6 />} />
         <Route path="/Lesson7" element={<Lesson7 />} />
+        <Route path="/Settings" element={<Settings />} />
+        <Route path="/Complete1" element={<Complete1 />} />
         <Route path="/Learn-1" element={<TwoLesson />} />
         <Route path="/LogIn" element={<LogIn />} />
         <Route path="/SignUp" element={<SignUp />} />

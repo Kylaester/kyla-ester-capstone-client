@@ -3,7 +3,7 @@ import { auth, db } from "./firebase-init";
 import { doc, setDoc, collection } from "firebase/firestore";
 
 // created an export function to be called to create users profile
-export const createUser = async (firstName, lastName, email, password) => {
+export const createUser = async (username, email, password) => {
   try {
     const userCredential = await createUserWithEmailAndPassword(
       auth,
@@ -11,7 +11,7 @@ export const createUser = async (firstName, lastName, email, password) => {
       password
     );
     const { user } = userCredential;
-    await updateProfile(user, { displayName: `${firstName} ${lastName}` });
+    await updateProfile(user, { displayName: `${username}` });
     console.log("User created successfully");
 
     const usersRef = collection(db, "users");
@@ -24,7 +24,6 @@ export const createUser = async (firstName, lastName, email, password) => {
       {
         displayName: user.displayName,
         email: user.email,
-        photoURL: user.photoURL,
       },
       { merge: true }
     );

@@ -114,3 +114,20 @@
     color: $DarkPink;
   }
 }
+.signup__back {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid $Blackish;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-top: 5rem;
+  margin-right: 2rem;
+}
+.signup__back-img {
+  width: 3rem;
+  height: 2rem;
+}

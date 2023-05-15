@@ -1,24 +1,38 @@
 import "./Lesson6.scss";
-// import Nav from "../../Components/Nav/Nav";
-// // import { useEffect, useState } from "react";
-// // import axios from "axios";
-// // import { Link } from "react-router-dom";
-// // import html from "../../Assets/html (2).png";
-// // import arrow from "../../Assets/down-arrow.png";
-// // import back from "../../Assets/angle-left.svg";
-// import TwoLesson from "../../Components/TwoLesson/TwoLesson";
-// import { Link } from "react-router-dom";
-// import Background from "../../Components/Background/Background";
+import { useState } from "react";
 import back from "../../Assets/angle-left.svg";
 import points from "../../Assets/golde_icon.svg";
-// import bear from "../../Assets/Group.svg";
-// import leaf1 from "../../Assets/Vector.svg";
 import plant from "../../Assets/plant.png";
 import { Link } from "react-router-dom";
+import WrongAnswer from "../../Components/WrongAnswer/WrongAnswer";
+import NeedHelp from "../../Components/NeedHelp/NeedHelp";
 
 function Lesson6() {
+  const [show, setShow] = useState(false);
+  const [wrongCount, setWrongCount] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
+  const handleHelpClick = () => {
+    setShowPopup(true);
+  };
+
+  const handleWrongAnswerClick = () => {
+    setWrongCount(wrongCount + 1);
+    if (wrongCount + 1 === 2) {
+      setShowPopup(true);
+    } else {
+      setShow(true);
+    }
+  };
   return (
     <section className="background">
+      {show && <WrongAnswer setShow={setShow} />}
+      {showPopup && (
+        <NeedHelp
+          setShowPopup={setShowPopup}
+          lesson={6}
+          handleWrongAnswerClick={handleWrongAnswerClick}
+        />
+      )}
       <section className="lesson6__container">
         <section className="lesson6">
           <div className="lesson6__top">
@@ -27,7 +41,7 @@ function Lesson6() {
             </Link>
             <div className="points">
               <img className="points__img" src={points} />
-              <p className="points__text">9999</p>
+              <p className="points__text">10</p>
             </div>
           </div>
           <div className="lesson6__middle">
@@ -62,13 +76,25 @@ function Lesson6() {
           <div className="lesson6__bottom">
             <h3 className="lesson6__language">HTML</h3>
             <div className="lesson6__answers">
-              <Link className="lesson6__answer">&lt;h1&gt;</Link>
-              <Link className="lesson6__answer">&lt;img&gt;</Link>
+              <Link
+                onClick={handleWrongAnswerClick}
+                className="lesson6__answer"
+              >
+                &lt;h1&gt;
+              </Link>
+              <Link
+                onClick={handleWrongAnswerClick}
+                className="lesson6__answer"
+              >
+                &lt;img&gt;
+              </Link>
               <Link to={"/Lesson7"} className="lesson6__answer">
                 &lt;p&gt;
               </Link>
             </div>
-            <Link className="lesson6__help">Need Help?</Link>
+            <Link onClick={handleHelpClick} className="lesson6__help">
+              Need Help?
+            </Link>
           </div>
         </section>
       </section>

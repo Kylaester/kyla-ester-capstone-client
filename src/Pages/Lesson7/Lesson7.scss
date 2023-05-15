@@ -22,7 +22,8 @@
   justify-content: center;
 }
 .lesson7 {
-  height: 61vw;
+  // height: 61vw;
+  min-height: 61vw;
   width: 95vw;
   border-radius: 30px;
   background-color: white;
@@ -84,11 +85,10 @@
       background-color: white;
       width: 10vw;
       height: 3vw;
-      margin: 1rem;
-      font-size: 15px;
+      font-size: 13px;
       position: absolute;
-      top: 15.5rem;
-      left: 3.5rem;
+      top: 16.5rem;
+      left: 5.5rem;
       border: 2px solid black;
       text-align: center;
       color: black;
@@ -106,7 +106,7 @@
   &__bottom {
     border: 2px solid black;
     width: 90vw;
-    height: 20vw;
+    min-height: 20vw;
   }
   &__language {
     border-bottom: 1px solid black;
@@ -129,16 +129,16 @@
     justify-content: space-around;
   }
   &__help {
-    background-color: $LightBlue;
-    width: 18vw;
-    height: 4vw;
+    background-color: #d6ebff;
+    width: 15vw;
+    height: 3vw;
     margin: 1rem;
     border-radius: 30px;
-    font-size: 27px;
+    font-size: 20px;
     padding-top: 0.5rem;
     position: absolute;
-    right: 9%;
-    bottom: 5%;
+    right: 9vw;
+
     border: 2px solid black;
     text-align: center;
     color: black;
