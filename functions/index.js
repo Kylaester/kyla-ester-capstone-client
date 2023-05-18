@@ -92,64 +92,54 @@ app.get("/displayArray", (req, res) => {
 app.get("/displayComments", (req, res) => {
   const comments = [
     {
-      username: "BreadWWater",
-      comment:
-        "At this point there’s no catching up T_T @xiAnthony #touchgrass",
-      time: "5:02pm",
+      username: "CodeMaster123",
+      comment: "Great job! Keep up the good work. #coding",
+      time: "9:15am",
     },
     {
-      username: "BreadWWater",
-      comment:
-        "At this point there’s no catching up T_T @xiAnthony #touchgrass",
-      time: "5:02pm",
+      username: "JavaDev",
+      comment: "I'm impressed with your coding skills. #programming",
+      time: "10:30am",
     },
     {
-      username: "BreadWWater",
-      comment:
-        "At this point there’s no catching up T_T @xiAnthony #touchgrass",
-      time: "5:02pm",
+      username: "PythonLover",
+      comment: "This is awesome! #python",
+      time: "1:45pm",
     },
     {
-      username: "BreadWWater",
-      comment:
-        "At this point there’s no catching up T_T @xiAnthony #touchgrass",
-      time: "5:02pm",
+      username: "CSSNinja",
+      comment: "You're rocking the styling. #css",
+      time: "3:20pm",
     },
     {
-      username: "BreadWWater",
-      comment:
-        "At this point there’s no catching up T_T @xiAnthony #touchgrass",
-      time: "5:02pm",
+      username: "HTML5Guru",
+      comment: "Your HTML skills are top-notch. #html",
+      time: "4:50pm",
     },
     {
-      username: "BreadWWater",
-      comment:
-        "At this point there’s no catching up T_T @xiAnthony #touchgrass",
-      time: "5:02pm",
+      username: "JavaScriptFan",
+      comment: "Impressive JavaScript code! #javascript",
+      time: "6:15pm",
     },
     {
-      username: "BreadWWater",
-      comment:
-        "At this point there’s no catching up T_T @xiAnthony #touchgrass",
-      time: "5:02pm",
+      username: "RubyWizard",
+      comment: "Your Ruby code is elegant. #ruby",
+      time: "7:40pm",
     },
     {
-      username: "BreadWWater",
-      comment:
-        "At this point there’s no catching up T_T @xiAnthony #touchgrass",
-      time: "5:02pm",
+      username: "CSharpDev",
+      comment: "Great use of C# in this project. #csharp",
+      time: "9:05pm",
     },
     {
-      username: "BreadWWater",
-      comment:
-        "At this point there’s no catching up T_T @xiAnthony #touchgrass",
-      time: "5:02pm",
+      username: "PHPDeveloper",
+      comment: "Nice PHP implementation! #php",
+      time: "10:30pm",
     },
     {
-      username: "BreadWWater",
-      comment:
-        "At this point there’s no catching up T_T @xiAnthony #touchgrass",
-      time: "5:02pm",
+      username: "CodeEnthusiast",
+      comment: "I'm inspired by your dedication to coding. #codepassion",
+      time: "11:55pm",
     },
   ];
 
