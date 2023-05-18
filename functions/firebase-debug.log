@@ -1,0 +1,447 @@
+[debug] [2023-05-15T17:56:21.642Z] ----------------------------------------------------------------------
+[debug] [2023-05-15T17:56:21.643Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-05-15T17:56:21.643Z] CLI Version:   12.0.0
+[debug] [2023-05-15T17:56:21.643Z] Platform:      darwin
+[debug] [2023-05-15T17:56:21.643Z] Node Version:  v18.15.0
+[debug] [2023-05-15T17:56:21.644Z] Time:          Mon May 15 2023 13:56:21 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-05-15T17:56:21.644Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-15T17:56:21.672Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-15T17:56:21.673Z] > authorizing via signed-in user (aegiky@gmail.com)
+[debug] [2023-05-15T17:56:21.673Z] [iam] checking project codecraft-miami for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-05-15T17:56:21.673Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions [none]
+[debug] [2023-05-15T17:56:21.673Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:21.674Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-05-15T17:56:22.250Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions 200
+[debug] [2023-05-15T17:56:22.250Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-05-15T17:56:22.251Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/codecraft-miami/serviceAccounts/codecraft-miami@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-05-15T17:56:22.251Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/codecraft-miami/serviceAccounts/codecraft-miami@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-05-15T17:56:22.659Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/codecraft-miami/serviceAccounts/codecraft-miami@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-05-15T17:56:22.660Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/codecraft-miami/serviceAccounts/codecraft-miami@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-05-15T17:56:22.662Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami [none]
+[debug] [2023-05-15T17:56:23.016Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami 200
+[debug] [2023-05-15T17:56:23.017Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami {"projectId":"codecraft-miami","projectNumber":"743626744072","displayName":"CodeCraft","name":"projects/codecraft-miami","resources":{"hostingSite":"codecraft-miami","realtimeDatabaseInstance":"codecraft-miami-default-rtdb","storageBucket":"codecraft-miami.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_9bcdbe20-518e-46ad-ae5f-6fe72e48bfd3"}
+[debug] [2023-05-15T17:56:23.017Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami [none]
+[debug] [2023-05-15T17:56:23.260Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami 200
+[debug] [2023-05-15T17:56:23.261Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami {"projectId":"codecraft-miami","projectNumber":"743626744072","displayName":"CodeCraft","name":"projects/codecraft-miami","resources":{"hostingSite":"codecraft-miami","realtimeDatabaseInstance":"codecraft-miami-default-rtdb","storageBucket":"codecraft-miami.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_9bcdbe20-518e-46ad-ae5f-6fe72e48bfd3"}
+[info] 
+[info] === Deploying to 'codecraft-miami'...
+[info] 
+[info] i  deploying database, firestore, functions, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2023-05-15T17:56:23.267Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/codecraft-miami/locations/-/instances/codecraft-miami-default-rtdb [none]
+[debug] [2023-05-15T17:56:23.840Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/codecraft-miami/locations/-/instances/codecraft-miami-default-rtdb 200
+[debug] [2023-05-15T17:56:23.840Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/codecraft-miami/locations/-/instances/codecraft-miami-default-rtdb {"name":"projects/743626744072/locations/us-central1/instances/codecraft-miami-default-rtdb","project":"projects/743626744072","databaseUrl":"https://codecraft-miami-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-05-15T17:56:23.843Z] >>> [apiv2][query] PUT https://codecraft-miami-default-rtdb.firebaseio.com/.settings/rules.json dryRun=true
+[debug] [2023-05-15T17:56:23.843Z] >>> [apiv2][body] PUT https://codecraft-miami-default-rtdb.firebaseio.com/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-05-15T17:56:24.159Z] <<< [apiv2][status] PUT https://codecraft-miami-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2023-05-15T17:56:24.159Z] <<< [apiv2][body] PUT https://codecraft-miami-default-rtdb.firebaseio.com/.settings/rules.json {"status":"ok"}
+[info] ✔  database: rules syntax for database codecraft-miami-default-rtdb is valid 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2023-05-15T17:56:24.164Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/codecraft-miami:test [none]
+[debug] [2023-05-15T17:56:24.164Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/codecraft-miami:test [omitted]
+[debug] [2023-05-15T17:56:24.496Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/codecraft-miami:test 200
+[debug] [2023-05-15T17:56:24.496Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/codecraft-miami:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2023-05-15T17:56:24.498Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami [none]
+[debug] [2023-05-15T17:56:24.748Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami 200
+[debug] [2023-05-15T17:56:24.748Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami {"projectId":"codecraft-miami","projectNumber":"743626744072","displayName":"CodeCraft","name":"projects/codecraft-miami","resources":{"hostingSite":"codecraft-miami","realtimeDatabaseInstance":"codecraft-miami-default-rtdb","storageBucket":"codecraft-miami.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_9bcdbe20-518e-46ad-ae5f-6fe72e48bfd3"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-05-15T17:56:24.752Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-05-15T17:56:24.752Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:24.754Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-05-15T17:56:24.754Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:24.756Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudbuild.googleapis.com [none]
+[debug] [2023-05-15T17:56:24.756Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudbuild.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:24.758Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/artifactregistry.googleapis.com [none]
+[debug] [2023-05-15T17:56:24.758Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/artifactregistry.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:25.549Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/artifactregistry.googleapis.com 200
+[debug] [2023-05-15T17:56:25.550Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-05-15T17:56:25.551Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudbuild.googleapis.com 200
+[debug] [2023-05-15T17:56:25.551Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-05-15T17:56:25.552Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/runtimeconfig.googleapis.com 200
+[debug] [2023-05-15T17:56:25.552Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-05-15T17:56:25.552Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudfunctions.googleapis.com 200
+[debug] [2023-05-15T17:56:25.552Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-05-15T17:56:25.553Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami/adminSdkConfig [none]
+[debug] [2023-05-15T17:56:26.119Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami/adminSdkConfig 200
+[debug] [2023-05-15T17:56:26.120Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami/adminSdkConfig {"projectId":"codecraft-miami","databaseURL":"https://codecraft-miami-default-rtdb.firebaseio.com","storageBucket":"codecraft-miami.appspot.com","locationId":"us-central"}
+[debug] [2023-05-15T17:56:26.121Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/codecraft-miami/configs [none]
+[debug] [2023-05-15T17:56:26.341Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/codecraft-miami/configs 200
+[debug] [2023-05-15T17:56:26.341Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/codecraft-miami/configs {}
+[debug] [2023-05-15T17:56:26.344Z] Validating nodejs source
+[debug] [2023-05-15T17:56:26.766Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-15T17:56:26.766Z] Building nodejs source
+[debug] [2023-05-15T17:56:26.766Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-15T17:56:26.771Z] Found firebase-functions binary at '/Users/kylaester/Documents/Capstone-CodeCraft/client/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-05-15T17:56:26.863Z] Serving at port 8616
+
+[debug] [2023-05-15T17:56:26.949Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-15T17:56:26.953Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/kylaester/Documents/Capstone-CodeCraft/client/functions (64.23 KB) for uploading 
+[debug] [2023-05-15T17:56:26.973Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/codecraft-miami/locations/-/functions [none]
+[debug] [2023-05-15T17:56:27.708Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/codecraft-miami/locations/-/functions 200
+[debug] [2023-05-15T17:56:27.709Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/codecraft-miami/locations/-/functions {}
+[debug] [2023-05-15T17:56:27.710Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-05-15T17:56:28.209Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/-/functions 200
+[debug] [2023-05-15T17:56:28.210Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-05-15T17:56:28.219Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com [none]
+[debug] [2023-05-15T17:56:28.219Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:28.221Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com [none]
+[debug] [2023-05-15T17:56:28.221Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:28.223Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/pubsub.googleapis.com [none]
+[debug] [2023-05-15T17:56:28.223Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/pubsub.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:28.225Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/storage.googleapis.com [none]
+[debug] [2023-05-15T17:56:28.225Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/storage.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:28.698Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com 200
+[debug] [2023-05-15T17:56:28.698Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2023-05-15T17:56:28.699Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com:enable [none]
+[debug] [2023-05-15T17:56:28.699Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com:enable x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:28.702Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com 200
+[debug] [2023-05-15T17:56:28.702Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2023-05-15T17:56:28.702Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com:enable [none]
+[debug] [2023-05-15T17:56:28.702Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:28.705Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/pubsub.googleapis.com 200
+[debug] [2023-05-15T17:56:28.705Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-05-15T17:56:28.706Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/storage.googleapis.com 200
+[debug] [2023-05-15T17:56:28.706Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-05-15T17:56:30.025Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com:enable 200
+[debug] [2023-05-15T17:56:30.025Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2023-05-15T17:56:30.456Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com:enable 200
+[debug] [2023-05-15T17:56:30.456Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com:enable [omitted]
+[debug] [2023-05-15T17:56:40.028Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com [none]
+[debug] [2023-05-15T17:56:40.029Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:40.459Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com [none]
+[debug] [2023-05-15T17:56:40.459Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:40.630Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com 200
+[debug] [2023-05-15T17:56:40.631Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2023-05-15T17:56:40.879Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com 200
+[debug] [2023-05-15T17:56:40.879Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-05-15T17:56:40.884Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/743626744072/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-05-15T17:56:40.887Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/743626744072/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-05-15T17:56:41.517Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/743626744072/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-05-15T17:56:41.517Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/743626744072/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-743626744072@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"105818518162483556987"}}
+[debug] [2023-05-15T17:56:41.807Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/743626744072/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-05-15T17:56:41.807Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/743626744072/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-743626744072@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"109701248893644314842"}}
+[debug] [2023-05-15T17:56:41.809Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami [none]
+[debug] [2023-05-15T17:56:42.021Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami 200
+[debug] [2023-05-15T17:56:42.022Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami {"projectId":"codecraft-miami","projectNumber":"743626744072","displayName":"CodeCraft","name":"projects/codecraft-miami","resources":{"hostingSite":"codecraft-miami","realtimeDatabaseInstance":"codecraft-miami-default-rtdb","storageBucket":"codecraft-miami.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_9bcdbe20-518e-46ad-ae5f-6fe72e48bfd3"}
+[debug] [2023-05-15T17:56:42.026Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/codecraft-miami/versions [none]
+[debug] [2023-05-15T17:56:42.026Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/codecraft-miami/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-05-15T17:56:42.723Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/codecraft-miami/versions 200
+[debug] [2023-05-15T17:56:42.724Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/codecraft-miami/versions {"name":"projects/743626744072/sites/codecraft-miami/versions/7f0502252258d1e3","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  firestore: deploying indexes... 
+[debug] [2023-05-15T17:56:42.726Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/codecraft-miami/releases pageSize=10&pageToken=
+[debug] [2023-05-15T17:56:42.729Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/codecraft-miami/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2023-05-15T17:56:43.057Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/codecraft-miami/releases 200
+[debug] [2023-05-15T17:56:43.058Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/codecraft-miami/releases {"releases":[{"name":"projects/codecraft-miami/releases/cloud.firestore","rulesetName":"projects/codecraft-miami/rulesets/f6fc5448-6ef3-4642-864e-8f462f10cc47","createTime":"2023-05-11T16:05:18.761580Z","updateTime":"2023-05-15T17:47:15.976846Z"},{"name":"projects/codecraft-miami/releases/firebase.storage/codecraft-miami.appspot.com","rulesetName":"projects/codecraft-miami/rulesets/80dbc33b-34f3-4d5c-b7d9-2548732f6e5a","createTime":"2023-05-15T01:10:44.335370Z","updateTime":"2023-05-15T01:10:44.335370Z"}]}
+[debug] [2023-05-15T17:56:43.075Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/codecraft-miami/rulesets/f6fc5448-6ef3-4642-864e-8f462f10cc47 [none]
+[debug] [2023-05-15T17:56:43.145Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/codecraft-miami/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2023-05-15T17:56:43.146Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/codecraft-miami/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2023-05-15T17:56:43.146Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/codecraft-miami/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2023-05-15T17:56:43.382Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/codecraft-miami/rulesets/f6fc5448-6ef3-4642-864e-8f462f10cc47 200
+[debug] [2023-05-15T17:56:43.382Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/codecraft-miami/rulesets/f6fc5448-6ef3-4642-864e-8f462f10cc47 [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[debug] [2023-05-15T17:56:43.471Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/codecraft-miami/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2023-05-15T17:56:43.471Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/codecraft-miami/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/codecraft-miami/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully for (default) database 
+[debug] [2023-05-15T17:56:43.472Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-05-15T17:56:43.473Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions [none]
+[debug] [2023-05-15T17:56:43.473Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-15T17:56:43.473Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-05-15T17:56:43.776Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions 200
+[debug] [2023-05-15T17:56:43.776Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-05-15T17:56:43.776Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-05-15T17:56:43.778Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-05-15T17:56:45.871Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-05-15T17:56:45.871Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-743626744072-us-central1/5944d247-87d5-4717-957f-e0d17c61976a.zip?GoogleAccessId=service-743626744072@gcf-admin-robot.iam.gserviceaccount.com&Expires=1684175205&Signature=CAnO59EdIkmKHut8FC7AG56FAPMTA%2Bs2Tt3yWZ2iMeAy4VjjCMBoSZIRSg%2Bbc0iySdNu5TOxYAl6WCyE8Yy3i%2Bgw75QjxNPAc4km1bUb6jHm3HKvrvpMw5ixnw3gRjEQZEoFoiWyCTggRxxSqk15I60eGviaF68xkPuIl2SxTiz97NF9U1%2FWaGPEupueTHAp9io%2BxYp0%2FFnYDe2bliyxO0frhD61CCgYjpASmoi%2Bsk8iczHNdDK5G0DbuatdC56mei2Td02QfgxI3XcxwEvWfgu%2Bw8gpa6iSFql7qnw%2ByfbIEAgQSGv2ZexabfcJZGyJ7EWbtUhytDpQLihPvxLguw%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-743626744072-us-central1","object":"5944d247-87d5-4717-957f-e0d17c61976a.zip"}}
+[debug] [2023-05-15T17:56:45.872Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-743626744072-us-central1/5944d247-87d5-4717-957f-e0d17c61976a.zip GoogleAccessId=service-743626744072%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1684175205&Signature=CAnO59EdIkmKHut8FC7AG56FAPMTA%2Bs2Tt3yWZ2iMeAy4VjjCMBoSZIRSg%2Bbc0iySdNu5TOxYAl6WCyE8Yy3i%2Bgw75QjxNPAc4km1bUb6jHm3HKvrvpMw5ixnw3gRjEQZEoFoiWyCTggRxxSqk15I60eGviaF68xkPuIl2SxTiz97NF9U1%2FWaGPEupueTHAp9io%2BxYp0%2FFnYDe2bliyxO0frhD61CCgYjpASmoi%2Bsk8iczHNdDK5G0DbuatdC56mei2Td02QfgxI3XcxwEvWfgu%2Bw8gpa6iSFql7qnw%2ByfbIEAgQSGv2ZexabfcJZGyJ7EWbtUhytDpQLihPvxLguw%3D%3D
+[debug] [2023-05-15T17:56:45.872Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-743626744072-us-central1/5944d247-87d5-4717-957f-e0d17c61976a.zip [stream]
+[debug] [2023-05-15T17:56:46.530Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-743626744072-us-central1/5944d247-87d5-4717-957f-e0d17c61976a.zip 200
+[debug] [2023-05-15T17:56:46.531Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-743626744072-us-central1/5944d247-87d5-4717-957f-e0d17c61976a.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  hosting[codecraft-miami]: beginning deploy... 
+[info] i  hosting[codecraft-miami]: found 30 files in build 
+[debug] [2023-05-15T17:56:46.549Z] [hosting] uploading with 200 concurrency
+[debug] [2023-05-15T17:56:46.556Z] [hosting] hash cache [YnVpbGQ] stored for 30 files
+[debug] [2023-05-15T17:56:46.556Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":30,"success":30,"errored":0,"retried":0,"total":30,"elapsed":4}
+[debug] [2023-05-15T17:56:46.556Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/743626744072/sites/codecraft-miami/versions/7f0502252258d1e3:populateFiles [none]
+[debug] [2023-05-15T17:56:46.556Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/743626744072/sites/codecraft-miami/versions/7f0502252258d1e3:populateFiles {"files":{"/asset-manifest.json":"59e660c7b6f51d98bbd78d18136de138f169333e7c3d0fa85559484f777fb67a","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/index.html":"698a266c08247bec7c86b0fc92ec3d756d7e5d33618ad3deaa0b809a2d8a71a5","/logo192.png":"caff018b7f1e8fd481eb1c50d75b0ef236bcd5078b1d15c8bb348453fee30293","/logo512.png":"191fc21360b4ccfb1cda11a1efb97f489ed22672ca83f4064316802bbfdd750e","/manifest.json":"341d52628782f8ac9290bbfc43298afccb47b7cbfcee146ae30cf0f46bc30900","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/static/css/main.3734c60a.css":"af368c0e5076664959b2af84e5da9782b7ffcb4d44fe137292601fc973848a05","/static/css/main.3734c60a.css.map":"4515aa149d9f788dde65af0a7c0090846aec37b8bc4a9152a26cb3a1dc45ec51","/static/js/main.a5b8e2db.js":"6c2a1a9b0a105d20c9dc26a1d68066f1be61d39b91a454299d090baf83ca466a","/static/js/main.a5b8e2db.js.LICENSE.txt":"107ea4591a6bfeb53cac3b805a895bb6c6fc43a7484d2f1104dcce0aa16c7a92","/static/js/main.a5b8e2db.js.map":"ec4602d415e4a4bae59b72f904d702ad40ff6acd80b7104b77881c3e507d9381","/static/media/Group.63ae024dd618fb7e9ab0af97e66ff3a5.svg":"4481272a78879305436a57fc67b8603ce3f884d39905e781759219d699387b7b","/static/media/Lesson1.af416d9d08afcdf3b81d.png":"75d4e448dcdb9737cc01397c984e8823a04cef6f50f8e2c1f4c62037bda603c7","/static/media/Lesson2.e3478171737c807d9b75.png":"fb2209f0d0321c30806a569af93368e98eae09bdeb6ea202736efcc528b7b590","/static/media/Lesson3.dd64d73bda19d7f67bfc.png":"35116ffa1b61e2895ed988c78f310357398b834ea3bd6481dc42e07275ab25b3","/static/media/Vector.8f48e47b84f26e16acbd761e576a781a.svg":"feb9be4f98f884c555a1dadc0757db1be00d2fde5600b816f96fa25aa6f01e5a","/static/media/abstract-horizontal-background-with-colorful-waves-in-yellow-orange-and-brown-colors-trendy-illustra.267e9def2943e4a85114.svg":"cc5403b6c721c898b639f29482b2c87a939be9e2bf3572fefc37c01772723e59","/static/media/angle-left.a2af88b9bdce4b986327be2511054b5f.svg":"7bf69b2dcd0885aa51b36ae0781d03914b38315df1bf4d60862101e38768aa30","/static/media/bearwoshadow.d5582ebbe86409ba907f73fa365dca81.svg":"20e3991f2f5fe49346f8a392a100770e79dbd4e6035bceddb2608f5d3bcbceb7","/static/media/chart-histogram.1e7f9153db79fd8477de1d3a5c857da9.svg":"6cc65dece73a3c2b03324c6cd99e2461e3300e9ee47ee7bce3c7f575baacb508","/static/media/golde_icon.1a5ca7eca773adf8e94ccb8f5dd71e49.svg":"fdf3aeb24f87ba7ea73b89825a4357954afdf928aa76da74e36ed4b4f897f739","/static/media/graduation-cap.dba458de7a4a25e56c2cb9b3bd97cd94.svg":"8a591dbab71d9fc7274a8200c481e905e24ebcff5ef3eaab2cddbf2d3692b9bf","/static/media/home (1).51f37e04196ecb6924ddb3d249c1eb47.svg":"af8a89f7ce22713abe869ae1cbd7a735ba80e555aca64606db13c25434dc5bd2","/static/media/html (2).86924b16e6a2876ed23c.png":"c682531f222c5e3c625b0bfde3d05876e5c209a3e05962f6653a03a51b42a989","/static/media/list-check.7aa1e5464b0211ff5fd8573477ca2136.svg":"ac4b681bbf7ce76ad752993432d77847030213f66eeaeb2b4edfb0e92cd0d474","/static/media/lock.0fc8d50cbc84a61604bdf2482e681862.svg":"1af77275bdf92ae26ee23cfa18ecdfc036f15ca6f8e2468ae716aeab80146ce6","/static/media/plant.c036cdec565866829222.png":"7ce23c459885e3533666e397c3fa024965466ce6ecf71048e8bcfe3b322ca962","/static/media/settings 1.c8079f04505d70dfbf14e5fda4795897.svg":"162b5f019bd1c3da0a75002e48bc99110ef635877f62c226cb6f2bc2775cb03f","/static/media/user.ca758fc89e2694ddf626cca9a8cd2ebe.svg":"051a5ee44689d0808a82b5c0cfd8cdd729ebfb971f5f6021279a6f76e85a85a1"}}
+[debug] [2023-05-15T17:56:47.079Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/743626744072/sites/codecraft-miami/versions/7f0502252258d1e3:populateFiles 200
+[debug] [2023-05-15T17:56:47.080Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/743626744072/sites/codecraft-miami/versions/7f0502252258d1e3:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/codecraft-miami/versions/7f0502252258d1e3/files"}
+[debug] [2023-05-15T17:56:47.080Z] [hosting][populate queue][FINAL] {"max":526,"min":526,"avg":526,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":526}
+[debug] [2023-05-15T17:56:47.080Z] [hosting] uploads queued: 0
+[debug] [2023-05-15T17:56:47.081Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1684173407081}
+[info] ✔  hosting[codecraft-miami]: file upload complete 
+[debug] [2023-05-15T17:56:47.081Z] [hosting] deploy completed after 548ms
+[info] i  database: releasing rules... 
+[debug] [2023-05-15T17:56:47.085Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/codecraft-miami/locations/-/instances/codecraft-miami-default-rtdb [none]
+[debug] [2023-05-15T17:56:47.417Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/codecraft-miami/locations/-/instances/codecraft-miami-default-rtdb 200
+[debug] [2023-05-15T17:56:47.417Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/codecraft-miami/locations/-/instances/codecraft-miami-default-rtdb {"name":"projects/743626744072/locations/us-central1/instances/codecraft-miami-default-rtdb","project":"projects/743626744072","databaseUrl":"https://codecraft-miami-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-05-15T17:56:47.418Z] >>> [apiv2][query] PUT https://codecraft-miami-default-rtdb.firebaseio.com/.settings/rules.json 
+[debug] [2023-05-15T17:56:47.418Z] >>> [apiv2][body] PUT https://codecraft-miami-default-rtdb.firebaseio.com/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-05-15T17:56:47.809Z] <<< [apiv2][status] PUT https://codecraft-miami-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2023-05-15T17:56:47.810Z] <<< [apiv2][body] PUT https://codecraft-miami-default-rtdb.firebaseio.com/.settings/rules.json {"status":"ok"}
+[info] ✔  database: rules for database codecraft-miami-default-rtdb released successfully 
+[debug] [2023-05-15T17:56:47.811Z] [rules] releasing cloud.firestore/(default) with ruleset projects/codecraft-miami/rulesets/f6fc5448-6ef3-4642-864e-8f462f10cc47
+[debug] [2023-05-15T17:56:47.812Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/codecraft-miami/releases/cloud.firestore/(default) [none]
+[debug] [2023-05-15T17:56:47.812Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/codecraft-miami/releases/cloud.firestore/(default) {"release":{"name":"projects/codecraft-miami/releases/cloud.firestore/(default)","rulesetName":"projects/codecraft-miami/rulesets/f6fc5448-6ef3-4642-864e-8f462f10cc47"}}
+[debug] [2023-05-15T17:56:48.291Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/codecraft-miami/releases/cloud.firestore/(default) 200
+[debug] [2023-05-15T17:56:48.291Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/codecraft-miami/releases/cloud.firestore/(default) {"name":"projects/codecraft-miami/releases/cloud.firestore","rulesetName":"projects/codecraft-miami/rulesets/f6fc5448-6ef3-4642-864e-8f462f10cc47","createTime":"2023-05-11T16:05:18.761580Z","updateTime":"2023-05-15T17:56:48.100875Z"}
+[debug] [2023-05-15T17:56:48.291Z] [rules] updated release projects/codecraft-miami/releases/cloud.firestore
+[info] ✔  firestore: released rules firestore.rules to cloud.firestore 
+[info] i  functions: creating Node.js 18 function helloWorld(us-central1)... 
+[debug] [2023-05-15T17:56:48.297Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/functions functionId=helloWorld
+[debug] [2023-05-15T17:56:48.297Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/functions {"name":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs18","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-uploads-743626744072-us-central1","object":"5944d247-87d5-4717-957f-e0d17c61976a.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"codecraft-miami\",\"databaseURL\":\"https://codecraft-miami-default-rtdb.firebaseio.com\",\"storageBucket\":\"codecraft-miami.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"codecraft-miami","EVENTARC_CLOUD_EVENT_SOURCE":"projects/codecraft-miami/locations/us-central1/services/helloWorld"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3fe622798b62e2fd1a74adf11e16b281dee3fce5"}}
+[debug] [2023-05-15T17:56:49.861Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/functions 200
+[debug] [2023-05-15T17:56:49.861Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/functions {"name":"projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2023-05-15T17:56:49.695809276Z","target":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2023-05-15T17:56:49.863Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 [none]
+[debug] [2023-05-15T17:56:50.197Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 200
+[debug] [2023-05-15T17:56:50.197Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 {"name":"projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2023-05-15T17:56:49.695809276Z","target":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs18","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-743626744072-us-central1","object":"helloWorld/function-source.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"service":"projects/codecraft-miami/locations/us-central1/services/helloworld","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"codecraft-miami\",\"databaseURL\":\"https://codecraft-miami-default-rtdb.firebaseio.com\",\"storageBucket\":\"codecraft-miami.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"codecraft-miami","EVENTARC_CLOUD_EVENT_SOURCE":"projects/codecraft-miami/locations/us-central1/services/helloWorld"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"743626744072-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3fe622798b62e2fd1a74adf11e16b281dee3fce5"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}]},"done":false}
+[debug] [2023-05-15T17:56:50.700Z] [create-default-us-central1-helloWorld] Retrying task index 0
+[debug] [2023-05-15T17:56:50.701Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 [none]
+[debug] [2023-05-15T17:56:51.115Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 200
+[debug] [2023-05-15T17:56:51.116Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 {"name":"projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2023-05-15T17:56:49.695809276Z","target":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs18","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-743626744072-us-central1","object":"helloWorld/function-source.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"service":"projects/codecraft-miami/locations/us-central1/services/helloworld","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"codecraft-miami\",\"databaseURL\":\"https://codecraft-miami-default-rtdb.firebaseio.com\",\"storageBucket\":\"codecraft-miami.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"codecraft-miami","EVENTARC_CLOUD_EVENT_SOURCE":"projects/codecraft-miami/locations/us-central1/services/helloWorld"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"743626744072-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3fe622798b62e2fd1a74adf11e16b281dee3fce5"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}]},"done":false}
+[debug] [2023-05-15T17:56:52.117Z] [create-default-us-central1-helloWorld] Retrying task index 0
+[debug] [2023-05-15T17:56:52.119Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 [none]
+[debug] [2023-05-15T17:56:52.544Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 200
+[debug] [2023-05-15T17:56:52.544Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 {"name":"projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2023-05-15T17:56:49.695809276Z","target":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs18","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-743626744072-us-central1","object":"helloWorld/function-source.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"service":"projects/codecraft-miami/locations/us-central1/services/helloworld","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"codecraft-miami\",\"databaseURL\":\"https://codecraft-miami-default-rtdb.firebaseio.com\",\"storageBucket\":\"codecraft-miami.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"codecraft-miami","EVENTARC_CLOUD_EVENT_SOURCE":"projects/codecraft-miami/locations/us-central1/services/helloWorld"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"743626744072-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3fe622798b62e2fd1a74adf11e16b281dee3fce5"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}]},"done":false}
+[debug] [2023-05-15T17:56:54.546Z] [create-default-us-central1-helloWorld] Retrying task index 0
+[debug] [2023-05-15T17:56:54.547Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 [none]
+[debug] [2023-05-15T17:56:54.916Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 200
+[debug] [2023-05-15T17:56:54.916Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 {"name":"projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2023-05-15T17:56:49.695809276Z","target":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs18","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-743626744072-us-central1","object":"helloWorld/function-source.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"service":"projects/codecraft-miami/locations/us-central1/services/helloworld","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"codecraft-miami\",\"databaseURL\":\"https://codecraft-miami-default-rtdb.firebaseio.com\",\"storageBucket\":\"codecraft-miami.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"codecraft-miami","EVENTARC_CLOUD_EVENT_SOURCE":"projects/codecraft-miami/locations/us-central1/services/helloWorld"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"743626744072-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3fe622798b62e2fd1a74adf11e16b281dee3fce5"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","state":"NOT_STARTED"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/codecraft-miami/locations/us-central1/services/helloworld"}]},"done":false}
+[debug] [2023-05-15T17:56:58.918Z] [create-default-us-central1-helloWorld] Retrying task index 0
+[debug] [2023-05-15T17:56:58.919Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 [none]
+[debug] [2023-05-15T17:56:59.398Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 200
+[debug] [2023-05-15T17:56:59.398Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07 {"name":"projects/codecraft-miami/locations/us-central1/operations/operation-1684173408583-5fbbf2dc23daa-d327c32b-d5a2fa07","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2023-05-15T17:56:49.695809276Z","endTime":"2023-05-15T17:56:55.133729487Z","target":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs18","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-743626744072-us-central1","object":"helloWorld/function-source.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"service":"projects/codecraft-miami/locations/us-central1/services/helloworld","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"codecraft-miami\",\"databaseURL\":\"https://codecraft-miami-default-rtdb.firebaseio.com\",\"storageBucket\":\"codecraft-miami.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"codecraft-miami","EVENTARC_CLOUD_EVENT_SOURCE":"projects/codecraft-miami/locations/us-central1/services/helloWorld"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"743626744072-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3fe622798b62e2fd1a74adf11e16b281dee3fce5"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","state":"NOT_STARTED"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/codecraft-miami/locations/us-central1/services/helloworld"}]},"done":true,"error":{"code":7,"message":"Unable to retrieve the repository metadata for projects/codecraft-miami/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.","details":[{"@type":"type.googleapis.com/google.rpc.Status","code":7,"message":"Unable to cleanup package projects/codecraft-miami/locations/us-central1/repositories/gcf-artifacts/packages/hello_world. Ensure that the Cloud Functions service account has 'artifactregistry.packages.delete' permission. You can add the permission by granting the role 'roles/artifactregistry.repoAdmin'."}]}}
+[error] Unable to retrieve the repository metadata for projects/codecraft-miami/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.
+[debug] [2023-05-15T17:56:59.408Z] Total Function Deployment time: 11105
+[debug] [2023-05-15T17:56:59.408Z] 1 Functions Deployed
+[debug] [2023-05-15T17:56:59.408Z] 1 Functions Errored
+[debug] [2023-05-15T17:56:59.408Z] 0 Function Deployments Aborted
+[debug] [2023-05-15T17:56:59.408Z] Average Function Deployment time: 11104
+[info] 
+[info] Functions deploy had errors with the following functions:
+	helloWorld(us-central1)
+[debug] [2023-05-15T17:56:59.670Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-05-15T17:56:59.672Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/codecraft-miami/locations/us-central1/repositories/gcf-artifacts/packages/hello_world [none]
+[debug] [2023-05-15T17:56:59.674Z] >>> [apiv2][query] GET https://us.gcr.io/v2/codecraft-miami/gcf/us-central1/tags/list [none]
+[debug] [2023-05-15T17:57:00.158Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/codecraft-miami/locations/us-central1/repositories/gcf-artifacts/packages/hello_world 404
+[debug] [2023-05-15T17:57:00.158Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/codecraft-miami/locations/us-central1/repositories/gcf-artifacts/packages/hello_world {"error":{"code":404,"message":"Package \"projects/codecraft-miami/locations/us-central1/repositories/gcf-artifacts/packages/hello_world\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-05-15T17:57:00.699Z] <<< [apiv2][status] GET https://us.gcr.io/v2/codecraft-miami/gcf/us-central1/tags/list 200
+[debug] [2023-05-15T17:57:00.700Z] <<< [apiv2][body] GET https://us.gcr.io/v2/codecraft-miami/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"codecraft-miami/gcf/us-central1","tags":[]}
+[debug] [2023-05-15T17:57:00.700Z] Could not find image for function projects/codecraft-miami/locations/us-central1/functions/helloWorld
+[debug] [2023-05-15T17:57:00.701Z] Functions deploy failed.
+[debug] [2023-05-15T17:57:00.701Z] {
+  "endpoint": {
+    "id": "helloWorld",
+    "project": "codecraft-miami",
+    "region": "us-central1",
+    "entryPoint": "helloWorld",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"codecraft-miami\",\"databaseURL\":\"https://codecraft-miami-default-rtdb.firebaseio.com\",\"storageBucket\":\"codecraft-miami.appspot.com\",\"locationId\":\"us-central\"}",
+      "GCLOUD_PROJECT": "codecraft-miami",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/codecraft-miami/locations/us-central1/services/helloWorld"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "3fe622798b62e2fd1a74adf11e16b281dee3fce5"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Unable to retrieve the repository metadata for projects/codecraft-miami/locations/us-central1/repositories/gcf-artifacts. Ensure that the Cloud Functions service account has 'artifactregistry.repositories.list' and 'artifactregistry.repositories.get' permissions. You can add the permissions by granting the role 'roles/artifactregistry.reader'.",
+    "status": 7
+  }
+}
+[debug] [2023-05-15T17:57:00.807Z] Error: Failed to create function helloWorld in region us-central1
+    at /usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:48:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:271:32)
+    at async Fabricator.createEndpoint (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:132:13)
+    at async handle (/usr/local/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:85:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2023-05-16T19:47:15.144Z] ----------------------------------------------------------------------
+[debug] [2023-05-16T19:47:15.144Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only functions
+[debug] [2023-05-16T19:47:15.145Z] CLI Version:   12.0.0
+[debug] [2023-05-16T19:47:15.145Z] Platform:      darwin
+[debug] [2023-05-16T19:47:15.145Z] Node Version:  v18.15.0
+[debug] [2023-05-16T19:47:15.146Z] Time:          Tue May 16 2023 15:47:15 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-05-16T19:47:15.146Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-16T19:47:15.174Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-16T19:47:15.174Z] > authorizing via signed-in user (aegiky@gmail.com)
+[debug] [2023-05-16T19:47:15.174Z] [iam] checking project codecraft-miami for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-05-16T19:47:15.175Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions [none]
+[debug] [2023-05-16T19:47:15.175Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-16T19:47:15.175Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-05-16T19:47:15.464Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions 200
+[debug] [2023-05-16T19:47:15.464Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-05-16T19:47:15.464Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/codecraft-miami/serviceAccounts/codecraft-miami@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-05-16T19:47:15.464Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/codecraft-miami/serviceAccounts/codecraft-miami@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-05-16T19:47:15.666Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/codecraft-miami/serviceAccounts/codecraft-miami@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-05-16T19:47:15.667Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/codecraft-miami/serviceAccounts/codecraft-miami@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'codecraft-miami'...
+[info] 
+[info] i  deploying functions 
+[debug] [2023-05-16T19:47:15.668Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami [none]
+[debug] [2023-05-16T19:47:16.123Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami 200
+[debug] [2023-05-16T19:47:16.123Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami {"projectId":"codecraft-miami","projectNumber":"743626744072","displayName":"CodeCraft","name":"projects/codecraft-miami","resources":{"hostingSite":"codecraft-miami","realtimeDatabaseInstance":"codecraft-miami-default-rtdb","storageBucket":"codecraft-miami.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_defd24ba-88da-468f-8529-7d0a908446e4"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-05-16T19:47:16.126Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-05-16T19:47:16.126Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-16T19:47:16.128Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-05-16T19:47:16.128Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-16T19:47:16.130Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudbuild.googleapis.com [none]
+[debug] [2023-05-16T19:47:16.130Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudbuild.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-16T19:47:16.131Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/artifactregistry.googleapis.com [none]
+[debug] [2023-05-16T19:47:16.131Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/artifactregistry.googleapis.com x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-16T19:47:16.704Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/runtimeconfig.googleapis.com 200
+[debug] [2023-05-16T19:47:16.704Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-05-16T19:47:16.705Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudfunctions.googleapis.com 200
+[debug] [2023-05-16T19:47:16.705Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-05-16T19:47:16.706Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/artifactregistry.googleapis.com 200
+[debug] [2023-05-16T19:47:16.706Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-05-16T19:47:16.707Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudbuild.googleapis.com 200
+[debug] [2023-05-16T19:47:16.707Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/codecraft-miami/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-05-16T19:47:16.707Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami/adminSdkConfig [none]
+[debug] [2023-05-16T19:47:17.138Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami/adminSdkConfig 200
+[debug] [2023-05-16T19:47:17.138Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami/adminSdkConfig {"projectId":"codecraft-miami","databaseURL":"https://codecraft-miami-default-rtdb.firebaseio.com","storageBucket":"codecraft-miami.appspot.com","locationId":"us-central"}
+[debug] [2023-05-16T19:47:17.139Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/codecraft-miami/configs [none]
+[debug] [2023-05-16T19:47:17.304Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/codecraft-miami/configs 200
+[debug] [2023-05-16T19:47:17.304Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/codecraft-miami/configs {}
+[debug] [2023-05-16T19:47:17.307Z] Validating nodejs source
+[debug] [2023-05-16T19:47:17.644Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-05-16T19:47:17.644Z] Building nodejs source
+[debug] [2023-05-16T19:47:17.645Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-16T19:47:17.649Z] Found firebase-functions binary at '/Users/kylaester/Documents/Capstone-CodeCraft/client/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-05-16T19:47:17.715Z] Serving at port 8485
+
+[debug] [2023-05-16T19:47:17.790Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-05-16T19:47:17.793Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/kylaester/Documents/Capstone-CodeCraft/client/functions (64.96 KB) for uploading 
+[debug] [2023-05-16T19:47:17.813Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/codecraft-miami/locations/-/functions [none]
+[debug] [2023-05-16T19:47:18.679Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/codecraft-miami/locations/-/functions 200
+[debug] [2023-05-16T19:47:18.679Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/codecraft-miami/locations/-/functions {"functions":[{"name":"projects/codecraft-miami/locations/us-central1/functions/displayArray","httpsTrigger":{"url":"https://us-central1-codecraft-miami.cloudfunctions.net/displayArray","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"displayArray","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"codecraft-miami@appspot.gserviceaccount.com","updateTime":"2023-05-16T19:35:25.849Z","versionId":"1","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"db78495688d67dbe77cf70f9f2a6b58113c5345c"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-617889880151.us-central1.cloudfunctions.appspot.com/3a4e8051-7600-4d42-a934-9377c5a72da9.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"codecraft-miami\",\"databaseURL\":\"https://codecraft-miami-default-rtdb.firebaseio.com\",\"storageBucket\":\"codecraft-miami.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"codecraft-miami","EVENTARC_CLOUD_EVENT_SOURCE":"projects/codecraft-miami/locations/us-central1/functions/displayArray"},"runtime":"nodejs18","ingressSettings":"ALLOW_ALL","buildId":"a15bcc71-ddd6-4d14-b1f8-ace94cb6236b","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/743626744072/locations/us-central1/builds/a15bcc71-ddd6-4d14-b1f8-ace94cb6236b","dockerRegistry":"ARTIFACT_REGISTRY"}]}
+[debug] [2023-05-16T19:47:18.681Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-05-16T19:47:19.136Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/-/functions 200
+[debug] [2023-05-16T19:47:19.136Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/codecraft-miami/locations/-/functions {"functions":[{"name":"projects/codecraft-miami/locations/us-central1/functions/helloWorld","buildConfig":{"runtime":"nodejs18","entryPoint":"helloWorld","source":{"storageSource":{"bucket":"gcf-v2-sources-743626744072-us-central1","object":"helloWorld/function-source.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"sourceProvenance":{}},"state":"FAILED","updateTime":"2023-05-15T17:56:55.139296037Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"3fe622798b62e2fd1a74adf11e16b281dee3fce5"},"stateMessages":[{"severity":"ERROR","type":"CloudRunServiceNotFound","message":"Cloud Run service projects/codecraft-miami/locations/us-central1/services/helloworld for the function was not found. The function will not work correctly. Please redeploy."}],"environment":"GEN_2"}]}
+[debug] [2023-05-16T19:47:19.147Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami [none]
+[debug] [2023-05-16T19:47:19.415Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami 200
+[debug] [2023-05-16T19:47:19.415Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/codecraft-miami {"projectId":"codecraft-miami","projectNumber":"743626744072","displayName":"CodeCraft","name":"projects/codecraft-miami","resources":{"hostingSite":"codecraft-miami","realtimeDatabaseInstance":"codecraft-miami-default-rtdb","storageBucket":"codecraft-miami.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_defd24ba-88da-468f-8529-7d0a908446e4"}
+[debug] [2023-05-16T19:47:19.417Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-05-16T19:47:19.417Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions [none]
+[debug] [2023-05-16T19:47:19.417Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions x-goog-quota-user=projects/codecraft-miami
+[debug] [2023-05-16T19:47:19.417Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-05-16T19:47:19.664Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions 200
+[debug] [2023-05-16T19:47:19.664Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/codecraft-miami:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-05-16T19:47:19.664Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-05-16T19:47:19.665Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/codecraft-miami/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-05-16T19:47:19.665Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/codecraft-miami/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2023-05-16T19:47:20.268Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/codecraft-miami/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-05-16T19:47:20.268Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/codecraft-miami/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-617889880151.us-central1.cloudfunctions.appspot.com/c4cd648d-0b6e-4fa9-80b6-e2caf88dedf6.zip?GoogleAccessId=service-743626744072@gcf-admin-robot.iam.gserviceaccount.com&Expires=1684268240&Signature=Z8eLMFBgy%2Fyt4XgEBLfFWcE6TllPD%2FQM2%2FWpxNJcaN8S5ws8WSgkgQ85Gp6LnuwykZLCakwX%2FdTfgjLhMtg9jcQqolmiDtzGs%2F0Bi9WQDEZZpduZlPMgE8K6j6mKi4Ks48HLfka8zur%2FPBSo4gWZch4vc7dRlKGVMa0HXCIE0qlGgeWb9c2q3pmUWXqYKk4Dw5eHFNxLm4V17tC6SK9pa%2B%2BCSwBAZJVrMtpdoLkek0oFOy2AbvyoPrRZ1GbWeZbfufo4TUwpPuNe%2BHAtGU8xU7VbZvgdyqee2Uj0Ip6UbowugbB3vp6oq0ksteSng1IsHU7eGr6UbJ8nWe8%2BWEceNQ%3D%3D"}
+[debug] [2023-05-16T19:47:20.270Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-617889880151.us-central1.cloudfunctions.appspot.com/c4cd648d-0b6e-4fa9-80b6-e2caf88dedf6.zip GoogleAccessId=service-743626744072%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1684268240&Signature=Z8eLMFBgy%2Fyt4XgEBLfFWcE6TllPD%2FQM2%2FWpxNJcaN8S5ws8WSgkgQ85Gp6LnuwykZLCakwX%2FdTfgjLhMtg9jcQqolmiDtzGs%2F0Bi9WQDEZZpduZlPMgE8K6j6mKi4Ks48HLfka8zur%2FPBSo4gWZch4vc7dRlKGVMa0HXCIE0qlGgeWb9c2q3pmUWXqYKk4Dw5eHFNxLm4V17tC6SK9pa%2B%2BCSwBAZJVrMtpdoLkek0oFOy2AbvyoPrRZ1GbWeZbfufo4TUwpPuNe%2BHAtGU8xU7VbZvgdyqee2Uj0Ip6UbowugbB3vp6oq0ksteSng1IsHU7eGr6UbJ8nWe8%2BWEceNQ%3D%3D
+[debug] [2023-05-16T19:47:20.270Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-617889880151.us-central1.cloudfunctions.appspot.com/c4cd648d-0b6e-4fa9-80b6-e2caf88dedf6.zip [stream]
+[debug] [2023-05-16T19:47:20.753Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-617889880151.us-central1.cloudfunctions.appspot.com/c4cd648d-0b6e-4fa9-80b6-e2caf88dedf6.zip 200
+[debug] [2023-05-16T19:47:20.753Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-617889880151.us-central1.cloudfunctions.appspot.com/c4cd648d-0b6e-4fa9-80b6-e2caf88dedf6.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	displayArray(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+

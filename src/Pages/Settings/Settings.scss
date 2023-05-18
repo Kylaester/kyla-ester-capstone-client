@@ -1,0 +1,98 @@
+@use "../../Partials/globals" as *;
+@use "../../Partials/variables" as *;
+@use "../../Partials/breakpoints" as *;
+.background {
+  @include tablet {
+    height: 68vw;
+    overflow: hidden;
+    background-color: $BrightYellow;
+    background-image: url(../../Assets/abstract-horizontal-background-with-colorful-waves-in-yellow-orange-and-brown-colors-trendy-illustra.svg);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.settings__container {
+  height: 68vw;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.settings {
+  min-height: 40vw;
+  width: 42vw;
+  border-radius: 30px;
+  background-color: white;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 20px solid $MediumGrey;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: black;
+  text-decoration: none;
+  &__title {
+    font-size: 30px;
+    margin: 1rem;
+  }
+  &__border {
+    height: 4rem;
+    width: 100%;
+    border-bottom: 2px solid black;
+  }
+  &__1 {
+    margin: 1rem;
+    font-size: 20px;
+  }
+  &__2 {
+    font-size: 20px;
+    margin: 1rem;
+  }
+  &__3 {
+    font-size: 20px;
+    margin: 1rem;
+  }
+  &__4 {
+    font-size: 30px;
+    margin: 2rem;
+  }
+  &__5 {
+    font-size: 20px;
+  }
+  &__logoff {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__log {
+    width: 35%;
+    height: 4vw;
+    display: flex;
+    border-radius: 35px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    margin: 1rem;
+    text-decoration: none;
+    color: black;
+  }
+}
+.settings__back-4 {
+  width: 5.5rem;
+  margin-left: 2rem;
+  height: 4rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid $Blackish;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+}
+.settings__back-img-4 {
+  width: 3rem;
+  height: 2rem;
+}

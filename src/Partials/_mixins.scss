@@ -1,0 +1,25 @@
+@use "./variables" as *;
+@mixin logo {
+  font-size: 33px;
+  color: $Blackish;
+}
+@mixin nav {
+  font-size: 26px;
+  color: $Blackish;
+}
+@mixin subheader {
+  font-size: 23px;
+  color: $Blackish;
+}
+@mixin myFeed {
+  font-size: 18px;
+  color: $Blackish;
+}
+@mixin Sidebar {
+  font-size: 15px;
+  color: $Blackish;
+}
+@mixin buddy {
+  font-size: 12px;
+  color: $Blackish;
+}

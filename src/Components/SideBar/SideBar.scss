@@ -1,0 +1,87 @@
+@use "../../Partials/globals" as *;
+@use "../../Partials/variables" as *;
+@use "../../Partials/mixins" as *;
+
+.side {
+  background-color: $LightYellow;
+  height: 75vw;
+  width: 19rem;
+  border: 2px solid $Blackish;
+  position: relative;
+  &__notif {
+    background-color: White;
+    border: 2px solid $Blackish;
+    display: flex;
+    margin: 10rem 1rem 0rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    height: 5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative;
+  }
+  &__message {
+    @include Sidebar;
+  }
+  &__click {
+    @include Sidebar;
+    color: #ff6767;
+  }
+}
+.side__settings {
+  margin: 1rem;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 11rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid $Blackish;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+
+  &-img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.notif {
+  width: 2rem;
+  height: 2rem;
+  z-index: 1;
+  background-color: rgb(255, 208, 208);
+  border-radius: 50%;
+  border: 3px solid black;
+  position: absolute;
+  right: 12rem;
+  text-decoration: none;
+  bottom: 3.5rem;
+  display: flex;
+  justify-content: center;
+  animation: pulse 2.5s linear infinite normal forwards;
+  align-items: center;
+  &__important {
+    font-size: 1.5rem;
+    color: #ff3737;
+  }
+}
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.2);
+  }
+
+  80% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2.2);
+  }
+}

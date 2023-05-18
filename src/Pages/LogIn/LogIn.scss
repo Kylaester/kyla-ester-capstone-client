@@ -1,0 +1,130 @@
+@use "../../Partials/globals" as *;
+@use "../../Partials/variables" as *;
+@use "../../Partials/mixins" as *;
+@use "../../Partials/breakpoints" as *;
+.background {
+  @include tablet {
+    height: 68vw;
+    overflow: hidden;
+    background-color: $BrightYellow;
+    background-image: url(../../Assets/abstract-horizontal-background-with-colorful-waves-in-yellow-orange-and-brown-colors-trendy-illustra.svg);
+    display: flex;
+  }
+}
+.login {
+  height: 68vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-container {
+    height: 55vw;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 20px solid $MediumGrey;
+    border-radius: 35px;
+  }
+  &__title {
+    @include logo;
+    margin-bottom: 4rem;
+  }
+  &__username {
+    height: 5vw;
+    width: 30vw;
+    border-radius: 10px;
+    border: 3px solid black;
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    font-size: 28px;
+    &::placeholder {
+      font-size: 28px;
+      color: black;
+    }
+  }
+  &__password {
+    height: 5vw;
+    width: 30vw;
+    border-radius: 10px;
+    border: 3px solid black;
+    padding-left: 1rem;
+    font-size: 28px;
+    &::placeholder {
+      font-size: 28px;
+      color: black;
+    }
+  }
+  &__button {
+    height: 6vw;
+    width: 20vw;
+    background-color: $LightPink;
+    font-size: 30px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    border-radius: 10px;
+    border: none;
+    margin-top: 3rem;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    transition: all 0.16s;
+    box-shadow: 0px 10px 0px 0px $DarkPink,
+      0px 0px 10px 0px rgba(120, 120, 120, 0.4);
+  }
+  &__button:focus {
+    outline: none;
+  }
+  &__button:active {
+    box-shadow: 0px 5px 0px 0px $DarkPink;
+    top: 5px;
+  }
+
+  &__text {
+    font-size: 28px;
+    margin-top: 2rem;
+  }
+  &__link {
+    font-size: 28px;
+    color: $DarkPink;
+    text-decoration: none;
+  }
+}
+.login__back {
+  width: 4rem;
+  height: 4rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid $Blackish;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-top: 5rem;
+  margin-right: 2rem;
+}
+.login__back-img {
+  width: 3rem;
+  height: 2rem;
+}
+// &__button {
+//   height: 6vw;
+//   width: 20vw;
+//   background-color: $LightPink;
+//   font-size: 30px;
+//   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+//   -webkit-text-stroke-width: 1px;
+//   -webkit-text-stroke-color: black;
+//   border-radius: 10px;
+//   border-top: 2px solid black;
+//   border-left: 2px solid black;
+//   border-right: 2px solid black;
+//   border-bottom: 13px solid $DarkPink;
+//   margin-top: 3rem;
+// }

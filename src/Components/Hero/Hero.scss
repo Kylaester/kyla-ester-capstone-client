@@ -1,10 +1,263 @@
 @use "../../Partials/globals" as *;
 @use "../../Partials/variables" as *;
+@use "../../Partials/mixins" as *;
+.hero {
+  height: 100%;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &__nav {
+    width: 90%;
+    height: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2rem;
+  }
+  &__back {
+    width: 4rem;
+    height: 3.5rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid $Blackish;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  &__help {
+    width: 35rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    margin-left: 2rem;
+    border: 3px solid $Blackish;
+  }
+  &__cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+  }
+  .__card:hover * {
+    background-color: $LightGrey;
+  }
+  &__card {
+    width: 13rem;
+    height: 10rem;
+    border-radius: 35px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 8px solid black;
+    justify-content: flex-end;
+    box-shadow: 5px 5px 16px -5px rgba(0, 0, 0, 0.34);
+    position: relative;
 
-.Hero {
-  height: 60vw;
-  width: 75vw;
-  margin-right: 1rem;
-  background-color: #b0b3e6;
-  border-radius: 10px;
+    &-bottom {
+      border-top: 1px solid black;
+      height: 10rem;
+    }
+    &-middle {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 2rem;
+      justify-content: center;
+      height: 15vw;
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 5vw;
+      margin-left: 1rem;
+      margin-top: 0.5rem;
+    }
+    &-text {
+      @include subheader;
+    }
+  }
+  &__language-pink {
+    width: 6rem;
+    height: 2rem;
+    background-color: $LightPink;
+    border: 3px solid $Blackish;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__language-blue {
+    width: 6rem;
+    height: 2rem;
+    background-color: $LightBlue;
+    border: 3px solid $Blackish;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__language-yellow {
+    width: 6rem;
+    height: 2rem;
+    background-color: $LightPink;
+    border: 3px solid $Blackish;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__language-text {
+    font-size: 13px;
+    color: black;
+  }
+  &__social {
+    display: flex;
+  }
+  &__feed {
+    width: 28rem;
+    height: 19rem;
+    border-radius: 35px;
+    background-color: white;
+    margin-bottom: 8rem;
+    margin-top: 0rem;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 8px solid black;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 5px 5px 16px -5px rgba(0, 0, 0, 0.34);
+    &-bottom {
+      border-top: 1px solid black;
+
+      padding-left: 1rem;
+      padding-top: 1rem;
+    }
+    &-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &-name {
+      margin-right: 6rem;
+      margin-bottom: 2rem;
+      margin-top: 3rem;
+    }
+    &-time {
+      margin-bottom: 2rem;
+      margin-top: 3rem;
+    }
+    &-p {
+      margin-left: 3rem;
+    }
+  }
+  &__friend {
+    margin-bottom: 1.5rem;
+  }
+  &__friends {
+    width: 13rem;
+    height: 19rem;
+    border-radius: 35px;
+    background-color: white;
+    margin-left: 1rem;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 8px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 5px 16px -5px rgba(0, 0, 0, 0.34);
+    &-name {
+      margin-top: 2rem;
+      margin-left: 1rem;
+      @include myFeed;
+    }
+    &__time {
+      @include myFeed;
+    }
+    &-bottom {
+      border-top: 1px solid black;
+      padding-left: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+  }
+}
+.lock {
+  width: 100%;
+  height: 14.5vw;
+  background: rgba(0, 0, 0, 0.65);
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 30px;
+  position: absolute;
+  top: 0px;
+
+  &-img {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    right: 45px;
+    bottom: 20px;
+  }
+}
+.link {
+  text-decoration: none;
+}
+.lock * {
+  animation: myAnim 6s ease 0s infinite normal forwards;
+}
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+
+  80% {
+    transform: rotate(-8deg);
+  }
+
+  90% {
+    transform: rotate(8deg);
+  }
 }

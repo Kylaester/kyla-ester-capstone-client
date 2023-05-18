@@ -1,70 +1,89 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CodeCraft
+🇨​​​​​🇴​​​​​🇩​​​​​🇪​​​​​ 🇨​​​​​🇷​​​​​🇦​​​​​🇫​​​​​🇹​​​​​
 
-## Available Scripts
+A brief description of what this project does and who it's for
+My web app is tailor-made for kids who love technology but sometimes find themselves spending too much time on things that don't really benefit them. We understand the need for exciting and fulfilling ways to learn coding, and that's exactly what we offer! Our platform provides interactive experiences that actively engage children in coding activities they'll truly enjoy. It's all about creating a fun and rewarding learning journey that helps kids channel their technology use into something productive. By joining us, children can develop valuable coding skills while feeling a real sense of accomplishment and joy along the way.
 
-In the project directory, you can run:
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Client:** React, JavaScript, Sass, HTML, Firebase, Firestore, Firebase AUTH, 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Server:** Node, Express, Firebase Cloud Functions
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Achievements
+- Points
+- Tablet Mode only
+- Lesson 1
+- Log in
+- Sign up
+- Log out
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install my-project with npm
 
-### `npm run eject`
+```bash
+  npm install
+```
+```bash
+ npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To deploy this project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Log in to the Firebase Console and create a new project
+```bash
+npm install firebase
+```
+```bash
+npm install -g firebase-tools
+```
+```bash
+firebase login
+```
+```bash
+npm run build
+```
+```bash
+firebase init
+```
+```bash
+firebase deploy 
+```
+## API Reference
 
-## Learn More
+#### Get all items
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```http
+  FETCH /api/displayArray
+```
+Displays the description for the items in every question to help the user answer correctly next time.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```http
+  FETCH /api/displayComments
+```
+Cycles through random messages in your feed.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Screenshots
 
-### Analyzing the Bundle Size
+![App Screenshot](https://i.postimg.cc/pLvQZsym/Screenshot-2023-05-17-at-11-45-41-PM.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![App Screenshot](https://i.postimg.cc/brHrN9P5/Screenshot-2023-05-17-at-7-38-42-PM.png)
 
-### Making a Progressive Web App
+## Lessons Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Through my experience, I confronted the challenge of juggling multiple tasks within limited time constraints. This taught me the importance of prioritization and the need to streamline my efforts effectively. Moreover, I discovered the value of thinking outside the box when encountering difficulties in getting my functions to work. Instead of succumbing to discouragement, I embraced a creative mindset, exploring innovative solutions and remaining resilient. This journey has not only enhanced my time management skills but also reinforced the significance of perseverance and adaptability. I now approach challenges with a more organized and resilient mindset, ready to overcome any obstacles that come my way.
 
-### Advanced Configuration
+## Next Steps
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Moving forward, the next crucial steps involve implementing a shop feature that allows users to utilize their earned points to purchase adorable characters, stylish clothes, and various items to personalize their cute characters. Additionally, it is essential to incorporate a check-in screen, fulfilling the original plan and further enhancing the user experience. By adding these features, the platform will offer an engaging and rewarding environment that encourages continued participation and creativity.

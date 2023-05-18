@@ -1,11 +1,62 @@
 @use "../../Partials/globals" as *;
 @use "../../Partials/variables" as *;
-
-.Nav {
-  color: black;
-  &__profile {
-    width: 20vw;
-    background-color: $Blurple;
-    border-radius: 50%;
+@use "../../Partials/mixins" as *;
+.nav {
+  background-color: white;
+  height: 68vw;
+  width: 18vw;
+  border-right: 3px black solid;
+  box-shadow: 13px 5px 16px -5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    @include logo;
+    margin: 4rem 2rem 2rem 2rem;
+    text-decoration: none;
+  }
+  &__icon {
+    width: 2.5vw;
+    margin-right: 1rem;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 2rem 2rem 2rem;
+    text-decoration: none;
+    color: black;
+  }
+  &__link-login {
+    width: 13vw;
+    height: 4vw;
+    background-color: $LightBlue;
+    border: 2px solid $Blackish;
+    border-radius: 30px;
+  }
+  &__selected {
+    width: 15vw;
+    height: 3vw;
+    border-top: 2px solid $Blackish;
+    border-right: 2px solid $Blackish;
+    border-left: 2px solid $Blackish;
+    border-bottom: 5px solid $Blackish;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 2rem 2rem 4rem;
+    text-decoration: none;
+    color: black;
+  }
+  &__icon-login {
+    width: 3vw;
+    margin-right: 0.5rem;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 }
