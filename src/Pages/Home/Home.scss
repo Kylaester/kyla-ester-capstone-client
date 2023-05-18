@@ -4,13 +4,42 @@
 .Background {
   @include tablet {
     height: 68vw;
-    // display: flex;
-    // align-items: center;
-    // justify-content: end;
     overflow: hidden;
     background-color: $BrightYellow;
     background-image: url(../../Assets/abstract-horizontal-background-with-colorful-waves-in-yellow-orange-and-brown-colors-trendy-illustra.svg);
+    background-repeat: repeat;
     display: flex;
     justify-content: space-between;
+  }
+  @keyframes backgroundmove {
+    0%,
+    100% {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+    }
+
+    10% {
+      transform: rotate(8deg);
+    }
+
+    20%,
+    40%,
+    60% {
+      transform: rotate(-10deg);
+    }
+
+    30%,
+    50%,
+    70% {
+      transform: rotate(10deg);
+    }
+
+    80% {
+      transform: rotate(-8deg);
+    }
+
+    90% {
+      transform: rotate(8deg);
+    }
   }
 }

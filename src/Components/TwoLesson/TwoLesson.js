@@ -1,9 +1,4 @@
 import "./TwoLesson.scss";
-// import { useEffect, useState } from "react";
-// import axios from "axios";
-// import { Link } from "react-router-dom";
-import html from "../../Assets/html (2).png";
-import arrow from "../../Assets/down-arrow.png";
 import back from "../../Assets/angle-left.svg";
 import { Link } from "react-router-dom";
 import points from "../../Assets/golde_icon.svg";
@@ -16,7 +11,7 @@ function TwoLesson() {
       <Link className="lesson" to={"/Lessons"}>
         <section className="lesson__hero">
           <div className="lesson__top">
-            <Link className="lesson__back" to={"/"}>
+            <Link className="lesson__back" to={"/Home"}>
               <img className="lesson__back-img" src={back} />
             </Link>
             <div className="lesson__text-container">

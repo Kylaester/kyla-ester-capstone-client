@@ -4,9 +4,6 @@
 .background {
   @include tablet {
     height: 68vw;
-    // display: flex;
-    // align-items: center;
-    // justify-content: end;
     overflow: hidden;
     background-color: $BrightYellow;
     background-image: url(../../Assets/abstract-horizontal-background-with-colorful-waves-in-yellow-orange-and-brown-colors-trendy-illustra.svg);
@@ -22,7 +19,6 @@
   justify-content: center;
 }
 .settings {
-  // height: 61vw;
   min-height: 40vw;
   width: 42vw;
   border-radius: 30px;
@@ -80,6 +76,8 @@
     justify-content: center;
     border: 2px solid black;
     margin: 1rem;
+    text-decoration: none;
+    color: black;
   }
 }
 .settings__back-4 {

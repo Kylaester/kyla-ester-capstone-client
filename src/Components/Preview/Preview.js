@@ -3,8 +3,10 @@ import "./Preview.scss";
 function PreviewAnswer() {
   return (
     <div className="preview">
-      <p className="preview--title">Preivew</p>
-      <p className="preview--1">Green Thumb</p>
+      <div className="preview__container">
+        <h1 className="preview__heading">Preivew</h1>
+        <h2 className="preview--title">Green Thumb</h2>
+      </div>
     </div>
   );
 }

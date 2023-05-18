@@ -1,17 +1,4 @@
 import "./WrongAnswer.scss";
-// import { useEffect, useState } from "react";
-// import axios from "axios";
-// import { Link } from "react-router-dom";
-// import html from "../../Assets/html (2).png";
-// import arrow from "../../Assets/down-arrow.png";
-// import back from "../../Assets/angle-left.svg";
-import TwoLesson from "../TwoLesson/TwoLesson";
-import { Link } from "react-router-dom";
-import Background from "../Background/Background";
-import back from "../../Assets/angle-left.svg";
-import points from "../../Assets/golde_icon.svg";
-import bear from "../../Assets/bearwoshadow.svg";
-import leaf1 from "../../Assets/Vector.svg";
 
 function WrongAnswer({ setShow }) {
   const handleWrongAnswerClick = () => {

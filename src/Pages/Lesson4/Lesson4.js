@@ -4,11 +4,12 @@ import points from "../../Assets/golde_icon.svg";
 import { Link } from "react-router-dom";
 import NeedHelp from "../../Components/NeedHelp/NeedHelp";
 import WrongAnswer from "../../Components/WrongAnswer/WrongAnswer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 function Lesson4() {
   const [show, setShow] = useState(false);
   const [wrongCount, setWrongCount] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
+
   const handleHelpClick = () => {
     setShowPopup(true);
   };
@@ -21,17 +22,17 @@ function Lesson4() {
       setShow(true);
     }
   };
+
   return (
     <section className="background">
       {show && <WrongAnswer setShow={setShow} />}
       {showPopup && (
         <NeedHelp
           setShowPopup={setShowPopup}
-          lesson={4}
+          lesson={3}
           handleWrongAnswerClick={handleWrongAnswerClick}
         />
       )}
-
       <section className="lesson4__container">
         <section className="lesson4">
           <div className="lesson4__top">
@@ -67,8 +68,18 @@ function Lesson4() {
           <div className="lesson4__bottom">
             <h3 className="lesson4__language">HTML</h3>
             <div className="lesson4__answers">
-              <Link className="lesson4__answer">&lt;h1&gt;</Link>
-              <Link className="lesson4__answer">&lt;p&gt;</Link>
+              <Link
+                onClick={handleWrongAnswerClick}
+                className="lesson4__answer"
+              >
+                &lt;h1&gt;
+              </Link>
+              <Link
+                onClick={handleWrongAnswerClick}
+                className="lesson4__answer"
+              >
+                &lt;p&gt;
+              </Link>
               <Link to={"/Lesson5"} className="lesson4__answer">
                 &lt;h2&gt;
               </Link>

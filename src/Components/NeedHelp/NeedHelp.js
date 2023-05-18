@@ -1,24 +1,23 @@
 import "./NeedHelp.scss";
-import TwoLesson from "../TwoLesson/TwoLesson";
-import { Link } from "react-router-dom";
-import Background from "../Background/Background";
-import back from "../../Assets/angle-left.svg";
-import points from "../../Assets/golde_icon.svg";
-import bear from "../../Assets/bearwoshadow.svg";
-import leaf1 from "../../Assets/Vector.svg";
-import popupData from "../../TagsReference.json";
 import React, { useEffect, useRef, useState } from "react";
 
 function NeedHelp({ setShowPopup, lesson }) {
   const popupContainerRef = useRef();
+  const [popupData, setPopupData] = useState([]);
 
-  const filteredData = popupData.filter((item) => item.lesson === lesson);
-  const items = filteredData.map((item) => (
-    <div key={item.name}>
-      <h2 className="popup__name">{item.name}</h2>
-      <p className="popup__desc">{item.desc}</p>
-    </div>
-  ));
+  useEffect(() => {
+    fetch(
+      "https://us-central1-codecraft-miami.cloudfunctions.net/api/displayArray"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const filteredData = data.filter((item) => item.lesson === lesson);
+        setPopupData(filteredData);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, [lesson]);
 
   const handleWrongAnswerClick = () => {
     setShowPopup(false);
@@ -49,7 +48,14 @@ function NeedHelp({ setShowPopup, lesson }) {
     <>
       <div className="popup">
         <div ref={popupContainerRef} className="popup__container">
-          <div className="popup__textbox">{items}</div>
+          <div className="popup__textbox">
+            {popupData.map((item) => (
+              <div key={item.name}>
+                <h2 className="popup__name">{item.name}</h2>
+                <p className="popup__desc">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

@@ -1,13 +1,10 @@
-// insert warehouse page details here
 import Nav from "../../Components/Nav/Nav.js";
 import back from "../../Assets/angle-left.svg";
 import "./SignUp.scss";
 import { useNavigate } from "react-router";
 import { createUser } from "../../firebase-auth.js";
 import { auth } from "../../firebase-init.js";
-// import { useEffect, useState } from "react";
-// import axios from "axios";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   let Navigate = useNavigate();
@@ -29,8 +26,8 @@ function SignUp() {
     }
     try {
       await createUser(username, email, password);
-      alert("Welcome ${username} !");
-      Navigate("/", { state: { userEmail: auth.currentUser.email } });
+      alert(`Welcome ${username}! !`);
+      Navigate("/Home", { state: { userEmail: auth.currentUser.email } });
     } catch (error) {
       alert("Sign up Failed, please try again");
     }
@@ -41,9 +38,9 @@ function SignUp() {
         <Nav />
         <section className="login">
           {" "}
-          <button className="signup__back" to={"/"}>
+          <Link className="signup__back" to={"/LogIn"}>
             <img className="signup__back-img" src={back} />
-          </button>
+          </Link>
           <form onSubmit={handleSubmit} className="login-container">
             <h1 className="login__title">CodeCraft</h1>
             <input

@@ -1,7 +1,4 @@
 import "./Hero.scss";
-// import { useEffect, useState } from "react";
-// import axios from "axios";
-// import { Link } from "react-router-dom";
 import back from "../../Assets/angle-left.svg";
 import lock from "../../Assets/lock.svg";
 import { Link } from "react-router-dom";

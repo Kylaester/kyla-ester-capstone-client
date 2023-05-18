@@ -5,9 +5,6 @@
 .background {
   @include tablet {
     height: 68vw;
-    // display: flex;
-    // align-items: center;
-    // justify-content: end;
     overflow: hidden;
     background-color: $BrightYellow;
     background-image: url(../../Assets/abstract-horizontal-background-with-colorful-waves-in-yellow-orange-and-brown-colors-trendy-illustra.svg);
@@ -94,7 +91,7 @@
     height: 7vw;
     width: 21vw;
     background-color: $LightPink;
-    font-size: 40px;
+    font-size: 2rem;
     -webkit-text-fill-color: white; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
@@ -106,7 +103,7 @@
     margin-top: 1rem;
   }
   &__text {
-    font-size: 28px;
+    font-size: 1.75rem;
     margin-top: 2rem;
   }
   &__link {

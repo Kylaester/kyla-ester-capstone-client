@@ -18,7 +18,7 @@ function LogIn() {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Login Successful!");
       setUserEmail(auth.currentUser.email);
-      navigate("/", { state: { userEmail: auth.currentUser.email } });
+      navigate("/Home", { state: { userEmail: auth.currentUser.email } });
     } catch (error) {
       alert("Invaid email or password");
     }

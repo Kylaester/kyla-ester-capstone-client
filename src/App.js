@@ -14,12 +14,16 @@ import LogIn from "./Pages/LogIn/LogIn.js";
 import SignUp from "./Pages/SignUp/SignUp.js";
 import React from "react";
 import TwoLesson from "./Components/TwoLesson/TwoLesson.js";
+import Notif from "./Components/NeedHelp copy/Notif.js";
+import Start from "./Pages/Start/Start.js";
+import ProgressPage from "./Pages/ProgressPage.js";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Start />} />
         <Route path="/Lessons" element={<Lessons />} />
         <Route path="/Leason1" element={<Leason1 />} />
         <Route path="/Lesson2" element={<Lesson2 />} />
@@ -33,6 +37,8 @@ function App() {
         <Route path="/Learn-1" element={<TwoLesson />} />
         <Route path="/LogIn" element={<LogIn />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Progress" element={<ProgressPage />} />
+        <Route path="/modal" element={<Notif />} />
       </Routes>
     </BrowserRouter>
   );

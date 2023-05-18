@@ -11,6 +11,7 @@ function Lesson7() {
   const [show, setShow] = useState(false);
   const [wrongCount, setWrongCount] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
+
   const handleHelpClick = () => {
     setShowPopup(true);
   };
@@ -23,16 +24,18 @@ function Lesson7() {
       setShow(true);
     }
   };
+
   return (
     <section className="background">
       {show && <WrongAnswer setShow={setShow} />}
       {showPopup && (
         <NeedHelp
           setShowPopup={setShowPopup}
-          lesson={7}
+          lesson={3}
           handleWrongAnswerClick={handleWrongAnswerClick}
         />
       )}
+
       <section className="lesson7__container">
         <section className="lesson7">
           <div className="lesson7__top">

@@ -1,14 +1,7 @@
 import "./Complete1.scss";
-// import Nav from "../../Components/Nav/Nav";
-// // import { useEffect, useState } from "react";
-// // import axios from "axios";
-// // import { Link } from "react-router-dom";
-// // import html from "../../Assets/html (2).png";
-// // import arrow from "../../Assets/down-arrow.png";
-// // import back from "../../Assets/angle-left.svg";
-// import TwoLesson from "../../Components/TwoLesson/TwoLesson";
+
 import { Link } from "react-router-dom";
-// import Background from "../../Components/Background/Background";
+
 import back from "../../Assets/angle-left.svg";
 import points from "../../Assets/golde_icon.svg";
 function Complete1() {
@@ -29,7 +22,9 @@ function Complete1() {
             <div className="achievement">
               <h1 className="achievement__title">Achievement Unlocked !</h1>
               <h2 className="achievement__subheader">20 Points - Newbie</h2>
-              <button className="achievement__progress">Progress</button>
+              <Link to={"/Progress"} className="achievement__progress">
+                Progress
+              </Link>
             </div>
             <Link to={"/Lessons"} className="achievement__finish">
               Finish
